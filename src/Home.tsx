@@ -169,6 +169,7 @@ const Home = (props: HomeProps) => {
 
   return (
     <div>
+      {/* @ts-ignore */}
       <style jsx>
         {`
           .bg-header {
