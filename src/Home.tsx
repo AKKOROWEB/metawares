@@ -123,7 +123,7 @@ const Home = (props: HomeProps) => {
           });
         }
       }
-    } catch (error:any) {
+    } catch (error) {
       let message = error.msg || 'Minting failed! Please try again!';
       if (!error.msg) {
         if (!error.message) {
@@ -215,16 +215,11 @@ const Home = (props: HomeProps) => {
           }
           .Punks-Evolved-container {
             min-height: 37.5rem;
-            background: url('WebBanner1reduced.jpg') no-repeat top center;
-            background-size: cover;
           }
 
           .stay-involved {
             height: 100%;
             height: 43.75rem;
-            background: url('./Web Banner 1 reduced.jpg') no-repeat center
-              center;
-            background-size: cover;
           }
           .stay-involved p {
             font-size: 1.5rem;
@@ -303,10 +298,12 @@ const Home = (props: HomeProps) => {
             color: #000;
             background-color: transparent;
           }
-          .bg-blood {
-            background-color: #ad0000;
+          .fnt-color-main {
+            color: #ef4116;
           }
-
+          .bg-color-main {
+            background-color: #ef4116;
+          }
           @media screen and (max-width: 1200px) {
             .mint-section-box,
             .header-section,
@@ -355,52 +352,57 @@ const Home = (props: HomeProps) => {
             width: 100%;
             height: 100%;
           }
+          .mw-360 {
+            max-width: 360px;
+          }
         `}
       </style>
 
-      <div className='bg-header header-h d-flex flex-column flex-md-row align-items-center justify-content-start justify-content-md-between'>
-        <div className='col-6 px-3 order-1 order-md-0'>
-          {!wallet.connected ? (
-            <ConnectButton>Connect Wallet</ConnectButton>
-          ) : (
-            <>
-              <Header candyMachine={candyMachine} />
-              <MintContainer>
-                {candyMachine?.state.isActive &&
-                candyMachine?.state.gatekeeper &&
-                wallet.publicKey &&
-                wallet.signTransaction ? (
-                  <GatewayProvider
-                    wallet={{
-                      publicKey:
-                        wallet.publicKey ||
-                        new PublicKey(CANDY_MACHINE_PROGRAM),
-                      //@ts-ignore
-                      signTransaction: wallet.signTransaction,
-                    }}
-                    gatekeeperNetwork={
-                      candyMachine?.state?.gatekeeper?.gatekeeperNetwork
-                    }
-                    clusterUrl={rpcUrl}
-                    options={{autoShowModal: false}}>
+      <div className='bg-header header-h d-flex flex-column flex-md-row align-items-center justify-content-start justify-content-md-around'>
+        <div className='col-4 px-3 order-1 order-md-0'>
+          <div className='mw-360 w-100'>
+            {!wallet.connected ? (
+              <ConnectButton>Connect Wallet</ConnectButton>
+            ) : (
+              <>
+                <Header candyMachine={candyMachine} />
+                <MintContainer>
+                  {candyMachine?.state.isActive &&
+                  candyMachine?.state.gatekeeper &&
+                  wallet.publicKey &&
+                  wallet.signTransaction ? (
+                    <GatewayProvider
+                      wallet={{
+                        publicKey:
+                          wallet.publicKey ||
+                          new PublicKey(CANDY_MACHINE_PROGRAM),
+                        //@ts-ignore
+                        signTransaction: wallet.signTransaction,
+                      }}
+                      gatekeeperNetwork={
+                        candyMachine?.state?.gatekeeper?.gatekeeperNetwork
+                      }
+                      clusterUrl={rpcUrl}
+                      options={{autoShowModal: false}}>
+                      <MintButton
+                        candyMachine={candyMachine}
+                        isMinting={isUserMinting}
+                        onMint={onMint}
+                      />
+                    </GatewayProvider>
+                  ) : (
                     <MintButton
                       candyMachine={candyMachine}
                       isMinting={isUserMinting}
                       onMint={onMint}
                     />
-                  </GatewayProvider>
-                ) : (
-                  <MintButton
-                    candyMachine={candyMachine}
-                    isMinting={isUserMinting}
-                    onMint={onMint}
-                  />
-                )}
-              </MintContainer>
-            </>
-          )}
+                  )}
+                </MintContainer>
+              </>
+            )}
+          </div>
         </div>
-        <div className='col-10 col-md-6  d-flex justify-content-center justify-content-md-end p-0 pe-md-5 order-0 order-md-1 align-items-center'>
+        <div className='col-10 col-md-4  d-flex justify-content-center justify-content-md-end p-0 pe-md-5 order-0 order-md-1 align-items-center'>
           <img
             className=' w-90 h-90'
             src='https://cdn.discordapp.com/attachments/905542266549047336/950143666872270898/Just_logo_optimized.png'
@@ -410,7 +412,7 @@ const Home = (props: HomeProps) => {
       </div>
       {/* SECTION TWO */}
       <div className='d-flex flex-column justify-content-center align-items-center my-5'>
-        <h3 className='py-4'>Understanding Metawares</h3>
+        <h3 className='py-4 fnt-color-main '>Understanding Metawares</h3>
         <div className='d-flex flex-column flex-md-row align-items-center justify-content-between justify-content-md-center pt-3 pb-5'>
           <img
             className='col-8 col-md-4 my-3'
@@ -449,7 +451,7 @@ const Home = (props: HomeProps) => {
       <div
         className={`container-fluid d-flex flex-column flex-md-row justify-content-between align-items-center px-3 px-md-5 py-5 my-4`}>
         <div className={`d-flex flex-column col-6`}>
-          <h1 className={`punk-font mb-5`}>Punks Evolved?</h1>
+          <h1 className={`punk-font fnt-color-main mb-5`}>Punks Evolved?</h1>
           <p>
             The genesis project to our ecosystem and the airdrop access card to
             all of our projects, the first of which was Jack In The Blocks.
@@ -462,18 +464,17 @@ const Home = (props: HomeProps) => {
           <div
             className={`d-flex flex-row flex-wrap justify-content-center align-items-center`}>
             <a
-              className={`jitb-style-btn d-flex flex-row align-items-center btn btn-light text-uppercase my-4 p-4`}
+              className={`jitb-style-btn d-flex flex-row align-items-center btn bg-color-main text-white text-uppercase my-4 p-4`}
               href={'http://discord.gg/s99MhhmttM'}>
               Discord
             </a>
             <a
-              className={`jitb-style-btn d-flex flex-row align-items-center btn btn-light text-uppercase my-4 m-2 p-4`}
+              className={`jitb-style-btn d-flex flex-row align-items-center btn bg-color-main text-white text-uppercase my-4 m-2 p-4`}
               href={'https://www.magiceden.io/marketplace/punks_evolved'}>
-              
               Magic Eden
             </a>
             <a
-              className={`jitb-style-btn d-flex flex-row align-items-center btn btn-light text-uppercase my-4 m-2 p-4`}
+              className={`jitb-style-btn d-flex flex-row align-items-center btn bg-color-main text-white text-uppercase my-4 m-2 p-4`}
               href={'https://twitter.com/punksevolved'}>
               Twitter
             </a>
@@ -492,7 +493,9 @@ const Home = (props: HomeProps) => {
           className='icon-size col-6 me-3 me-md-5'
         />
         <div className={`d-flex flex-column col-6`}>
-          <h1 className={`punk-font mb-5`}>Jack in The Blocks?</h1>
+          <h1 className={`punk-font mb-5 fnt-color-main`}>
+            Jack in The Blocks?
+          </h1>
           <p>
             The second project in our ecosystem and the first airdrop to Punks
             Evolved holders. Owning a Jack is owning a AAA 3D project with the
@@ -503,17 +506,17 @@ const Home = (props: HomeProps) => {
           <div
             className={`d-flex flex-row flex-wrap justify-content-center align-items-center`}>
             <a
-              className={`jitb-style-btn d-flex flex-row align-items-center btn btn-light text-uppercase my-4 p-4`}
+              className={`jitb-style-btn d-flex flex-row align-items-center btn bg-color-main text-white text-uppercase my-4 p-4`}
               href={'http://discord.gg/s99MhhmttM'}>
               Discord
             </a>
             <a
-              className={`jitb-style-btn d-flex flex-row align-items-center btn btn-light text-uppercase my-4 m-2 p-4`}
+              className={`jitb-style-btn d-flex flex-row align-items-center btn bg-color-main text-white text-uppercase my-4 m-2 p-4`}
               href={'https://jacksevolved.io/'}>
               Mint
             </a>
             <a
-              className={`jitb-style-btn d-flex flex-row align-items-center btn btn-light text-uppercase my-4 m-2 p-4`}
+              className={`jitb-style-btn d-flex flex-row align-items-center btn bg-color-main text-white text-uppercase my-4 m-2 p-4`}
               href={'https://twitter.com/punksevolved'}>
               Twitter
             </a>
@@ -522,7 +525,9 @@ const Home = (props: HomeProps) => {
       </div>
       {/* SECTION SIX */}
       <div className='d-flex flex-column justify-content-center align-items-center py-5'>
-        <h1 className={`punk-font mb-5`}>A DEEPER COMPREHENSIVE</h1>
+        <h1 className={`punk-font mb-5 fnt-color-main`}>
+          A DEEPER COMPREHENSIVE
+        </h1>
         <div
           className={`container-fluid d-flex flex-column flex-md-row justify-content-between align-items-center px-3 px-md-5 py-5 my-4`}>
           <div className={`d-flex flex-column col-6`}>
@@ -543,7 +548,7 @@ const Home = (props: HomeProps) => {
             <div
               className={`d-flex flex-row flex-wrap justify-content-center align-items-center`}>
               <a
-                className={`jitb-style-btn d-flex flex-row align-items-center btn btn-light text-uppercase my-4 m-2 p-4`}
+                className={`jitb-style-btn d-flex flex-row align-items-center btn bg-color-main text-white text-uppercase my-4 m-2 p-4`}
                 href={'https://punksevolved.io/'}>
                 Read Article
               </a>
@@ -556,9 +561,9 @@ const Home = (props: HomeProps) => {
         </div>
       </div>
       <div
-        className={`container-fluid socials d-flex flex-column justify-content-center
-            align-items-center px-3 px-md-5 pt-2`}>
-        <h1>Stay involved</h1>
+        className={`container-fluid socials d-flex flex-column 
+            align-items-center px-3 px-md-5`}>
+        <h1 className='text-white mt-5 pt-5 pb-5'>Stay involved</h1>
         <div
           className={`d-flex flex-column flex-md-row  flex-wrap justify-content-around align-items-center`}>
           <a
