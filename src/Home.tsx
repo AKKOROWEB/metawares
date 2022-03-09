@@ -359,7 +359,7 @@ const Home = (props: HomeProps) => {
       </style>
 
       <div className='bg-header header-h d-flex flex-column flex-md-row align-items-center justify-content-start justify-content-md-around'>
-        <div className='col-4 px-3 order-1 order-md-0'>
+        <div className='col-10 col-md-4 px-3 order-1 order-md-0'>
           <div className='mw-360 w-100'>
             {!wallet.connected ? (
               <ConnectButton>Connect Wallet</ConnectButton>
@@ -415,15 +415,15 @@ const Home = (props: HomeProps) => {
         <h3 className='py-4 fnt-color-main '>Understanding Metawares</h3>
         <div className='d-flex flex-column flex-md-row align-items-center justify-content-between justify-content-md-center pt-3 pb-5'>
           <img
-            className='col-8 col-md-4 my-3'
+            className='col-12 col-sm-8 col-md-4 my-3'
             src='https://cdn.discordapp.com/attachments/905542266549047336/950190179912667166/Implement_Blurb-01.png'
           />
           <img
-            className='col-8 col-md-4 my-3'
+            className='col-12 col-sm-8 col-md-4 my-3'
             src='https://cdn.discordapp.com/attachments/905542266549047336/950190180197892116/Mint_Blurb-01-01.png'
           />
           <img
-            className='col-8 col-md-4 my-3'
+            className='col-12 col-sm-8 col-md-4 my-3'
             src='https://cdn.discordapp.com/attachments/905542266549047336/950190180453724180/Trade_Blurb-01.png'
           />
         </div>
@@ -450,7 +450,7 @@ const Home = (props: HomeProps) => {
       {/* SECTION FOUR */}
       <div
         className={`container-fluid d-flex flex-column flex-md-row justify-content-between align-items-center px-3 px-md-5 py-5 my-4`}>
-        <div className={`d-flex flex-column col-6`}>
+        <div className={`d-flex flex-column col col-md-6`}>
           <h1 className={`punk-font fnt-color-main mb-5`}>Punks Evolved?</h1>
           <p>
             The genesis project to our ecosystem and the airdrop access card to
@@ -492,7 +492,7 @@ const Home = (props: HomeProps) => {
           src='https://cdn.discordapp.com/attachments/905542266549047336/950182786919170098/Jacks_Icon-01.png'
           className='icon-size col-6 me-3 me-md-5'
         />
-        <div className={`d-flex flex-column col-6`}>
+        <div className={`d-flex flex-column col col-md-6`}>
           <h1 className={`punk-font mb-5 fnt-color-main`}>
             Jack in The Blocks?
           </h1>
@@ -530,7 +530,7 @@ const Home = (props: HomeProps) => {
         </h1>
         <div
           className={`container-fluid d-flex flex-column flex-md-row justify-content-around align-items-center px-3 px-md-5 py-5 my-4`}>
-          <div className={`d-flex flex-column col-4`}>
+          <div className={`d-flex flex-column col col-md-4`}>
             <p>
               Our Third and final project in our ecosystem, airdropped to Punks
               Evolved Holders after our snapshot post whitelist sale.
@@ -556,7 +556,7 @@ const Home = (props: HomeProps) => {
           </div>
           <img
             src='https://cdn.discordapp.com/attachments/905542266549047336/938979994720428102/unknown.png'
-            className='icon-size col-6 ms-3 ms-md-5'
+            className='icon-size col-6 ms-0 ms-md-5'
           />
         </div>
       </div>
