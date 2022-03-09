@@ -529,8 +529,8 @@ const Home = (props: HomeProps) => {
           A DEEPER COMPREHENSIVE
         </h1>
         <div
-          className={`container-fluid d-flex flex-column flex-md-row justify-content-between align-items-center px-3 px-md-5 py-5 my-4`}>
-          <div className={`d-flex flex-column col-6`}>
+          className={`container-fluid d-flex flex-column flex-md-row justify-content-around align-items-center px-3 px-md-5 py-5 my-4`}>
+          <div className={`d-flex flex-column col-4`}>
             <p>
               Our Third and final project in our ecosystem, airdropped to Punks
               Evolved Holders after our snapshot post whitelist sale.
@@ -555,7 +555,7 @@ const Home = (props: HomeProps) => {
             </div>
           </div>
           <img
-            src='https://cdn.discordapp.com/attachments/905542266549047336/950182768254525510/Punk_Icon-01.png'
+            src='https://cdn.discordapp.com/attachments/905542266549047336/938979994720428102/unknown.png'
             className='icon-size col-6 ms-3 ms-md-5'
           />
         </div>
