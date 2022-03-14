@@ -172,7 +172,7 @@ const Home = (props: HomeProps) => {
       {/* @ts-ignore */}
       <style jsx>
         {`
-'Media Gothic',          @import url('http://fonts.cdnfonts.com/css/media-gothic');
+           @import url('http://fonts.cdnfonts.com/css/media-gothic');
 
           .bg-header {
             background: url('https://cdn.discordapp.com/attachments/905542266549047336/950136697591574618/Just_concrete_optimized.png')
