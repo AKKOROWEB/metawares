@@ -172,6 +172,8 @@ const Home = (props: HomeProps) => {
       {/* @ts-ignore */}
       <style jsx>
         {`
+'Media Gothic',          @import url('http://fonts.cdnfonts.com/css/media-gothic');
+
           .bg-header {
             background: url('https://cdn.discordapp.com/attachments/905542266549047336/950136697591574618/Just_concrete_optimized.png')
               no-repeat top center;
@@ -193,7 +195,7 @@ const Home = (props: HomeProps) => {
           }
           body {
             margin: 0;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+            font-family:'Media Gothic', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
               'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
               'Helvetica Neue', sans-serif;
             -webkit-font-smoothing: antialiased;
