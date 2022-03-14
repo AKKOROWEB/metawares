@@ -123,7 +123,7 @@ const Home = (props: HomeProps) => {
           });
         }
       }
-    } catch (error) {
+    } catch (error:any) {
       let message = error.msg || 'Minting failed! Please try again!';
       if (!error.msg) {
         if (!error.message) {
