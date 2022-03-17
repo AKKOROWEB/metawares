@@ -123,7 +123,7 @@ const Home = (props: HomeProps) => {
           });
         }
       }
-    } catch (error:any) {
+    } catch (error) {
       let message = error.msg || 'Minting failed! Please try again!';
       if (!error.msg) {
         if (!error.message) {
@@ -172,7 +172,7 @@ const Home = (props: HomeProps) => {
       {/* @ts-ignore */}
       <style jsx>
         {`
-           @import url('http://fonts.cdnfonts.com/css/media-gothic');
+          @import url('http://fonts.cdnfonts.com/css/media-gothic');
 
           .bg-header {
             background: url('https://cdn.discordapp.com/attachments/905542266549047336/950136697591574618/Just_concrete_optimized.png')
@@ -195,14 +195,17 @@ const Home = (props: HomeProps) => {
           }
           body {
             margin: 0;
-            font-family:'Media Gothic', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
-              'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
-              'Helvetica Neue', sans-serif;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
+
             background-color: RGB(255, 255, 255) !important;
             // max-width: 1920px;
             margin: 0 auto;
+          }
+          .fnt {
+            font-family: 'Media Gothic', -apple-system, BlinkMacSystemFont,
+              'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
+              'Droid Sans', 'Helvetica Neue', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
           }
 
           code {
@@ -357,6 +360,22 @@ const Home = (props: HomeProps) => {
           .mw-360 {
             max-width: 360px;
           }
+          .bar {
+            height: 3px;
+            max-width: 66%;
+            width: 100%;
+            background-color: #000;
+          }
+          .s-bar {
+            height: 3px;
+            max-width: 33%;
+            width: 100%;
+            background-color: #000;
+          }
+          .fnt-monospace {
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+          }
         `}
       </style>
 
@@ -414,7 +433,12 @@ const Home = (props: HomeProps) => {
       </div>
       {/* SECTION TWO */}
       <div className='d-flex flex-column justify-content-center align-items-center my-5'>
-        <h3 className='py-4 fnt-color-main '>Understanding Metawares</h3>
+        <h3 className='py-4 fnt fnt-color-main text-center'>
+          Understanding Metawares
+        </h3>
+        <div className='bar'></div>
+        <br />
+        <div className='s-bar'></div>
         <div className='d-flex flex-column flex-md-row align-items-center justify-content-between justify-content-md-center pt-3 pb-5'>
           <img
             className='col-12 col-sm-8 col-md-4 my-3'
@@ -453,18 +477,27 @@ const Home = (props: HomeProps) => {
       <div
         className={`container-fluid d-flex flex-column flex-md-row justify-content-between align-items-center px-3 px-md-5 py-5 my-4`}>
         <div className={`d-flex flex-column col col-md-6`}>
-          <h1 className={`punk-font fnt-color-main mb-5`}>Punks Evolved?</h1>
-          <p>
-            The genesis project to our ecosystem and the airdrop access card to
-            all of our projects, the first of which was Jack In The Blocks.
-            Punks Evolved Holders will also receive a MetaWares market Card as
-            an airdrop after the snapshot taken some time after our sale. Punks
-            Evolved also serves as one of our three utility NFTs which grants a
-            30% allocation to MetaWares Market royalties.
+          <h1 className={`punk-font fnt-color-main mb-5 fnt`}>
+            Punks Evolved?
+          </h1>
+
+          <p className=''>
+            <span className='fnt'>
+              The genesis project to our ecosystem and the airdrop access card
+              to all of our projects, the first of which was Jack In The Blocks.
+              Punks Evolved Holders will also receive a MetaWares market Card as
+              an airdrop after the snapshot taken some time after our sale.
+              Punks Evolved also serves as one of our three utility NFTs which
+              grants a{' '}
+            </span>
+            <span className='fnt-monospace'>30%</span>{' '}
+            <span className='fnt'>
+              allocation to MetaWares Market royalties.
+            </span>
           </p>
 
           <div
-            className={`d-flex flex-row flex-wrap justify-content-center align-items-center`}>
+            className={`d-flex flex-row flex-wrap justify-content-center align-items-center fnt`}>
             <a
               className={`jitb-style-btn d-flex flex-row align-items-center btn bg-color-main text-white text-uppercase my-4 p-4`}
               href={'http://discord.gg/s99MhhmttM'}>
@@ -495,30 +528,39 @@ const Home = (props: HomeProps) => {
           className='icon-size col-6 me-3 me-md-5'
         />
         <div className={`d-flex flex-column col col-md-6`}>
-          <h1 className={`punk-font mb-5 fnt-color-main`}>
+          <h1 className={`punk-font mb-5 fnt-color-main fnt`}>
             Jack in The Blocks?
           </h1>
           <p>
-            The second project in our ecosystem and the first airdrop to Punks
-            Evolved holders. Owning a Jack is owning a AAA 3D project with the
-            lowest mint price on Solana, as well as utility incentives via a 10%
-            royalty allocation to MetaWares Marketplace.
+            <span className='fnt'>
+              The second project in our ecosystem and the first airdrop to Punks
+              Evolved holders. Owning a Jack is owning a AAA
+            </span>{' '}
+            <span className='fnt-monospace'>3</span>
+            <span className='fnt'>
+              D project with the lowest mint price on Solana, as well as utility
+              incentives via a
+            </span>{' '}
+            10%
+            <span className='fnt'>
+              royalty allocation to MetaWares Marketplace.
+            </span>
           </p>
 
           <div
             className={`d-flex flex-row flex-wrap justify-content-center align-items-center`}>
             <a
-              className={`jitb-style-btn d-flex flex-row align-items-center btn bg-color-main text-white text-uppercase my-4 p-4`}
+              className={`jitb-style-btn d-flex flex-row align-items-center btn bg-color-main text-white text-uppercase my-4 p-4 fnt`}
               href={'http://discord.gg/s99MhhmttM'}>
               Discord
             </a>
             <a
-              className={`jitb-style-btn d-flex flex-row align-items-center btn bg-color-main text-white text-uppercase my-4 m-2 p-4`}
+              className={`jitb-style-btn d-flex flex-row align-items-center btn bg-color-main text-white text-uppercase my-4 m-2 p-4 fnt`}
               href={'https://jacksevolved.io/'}>
               Mint
             </a>
             <a
-              className={`jitb-style-btn d-flex flex-row align-items-center btn bg-color-main text-white text-uppercase my-4 m-2 p-4`}
+              className={`jitb-style-btn d-flex flex-row align-items-center btn bg-color-main text-white text-uppercase my-4 m-2 p-4 fnt`}
               href={'https://twitter.com/punksevolved'}>
               Twitter
             </a>
@@ -527,28 +569,39 @@ const Home = (props: HomeProps) => {
       </div>
       {/* SECTION SIX */}
       <div className='d-flex flex-column justify-content-center align-items-center py-5'>
-        <h1 className={`punk-font mb-5 fnt-color-main`}>
+        <h1 className={`punk-font mb-5 fnt-color-main text-center fnt`}>
           A DEEPER COMPREHENSIVE
         </h1>
+        <div className='bar'></div>
+        <br />
+        <div className='s-bar'></div>
         <div
           className={`container-fluid d-flex flex-column flex-md-row justify-content-around align-items-center px-3 px-md-5 py-5 my-4`}>
           <div className={`d-flex flex-column col col-md-4`}>
-            <p>
+            <p className='fnt'>
               Our Third and final project in our ecosystem, airdropped to Punks
               Evolved Holders after our snapshot post whitelist sale.
             </p>
             <p>
-              Owning a card grants 65% royalty allocation to all aftermarket
-              fees generated on MetaWares marketplace, airdropped automatically
-              each week.
+              <span className='fnt'>Owning a card grants</span> <span>65%</span>{' '}
+              <span className='fnt'>
+                royalty allocation to all aftermarket fees generated on
+                MetaWares marketplace, airdropped automatically each week.
+              </span>
             </p>
             <p>
-              It will also secure you to all future benefits the marketplace
-              holds such as 3D video tutorials, special access mints, and more.
+              <span className='fnt'>
+                It will also secure you to all future benefits the marketplace
+                holds such as{' '}
+              </span>{' '}
+              <span className='fnt-monospace'>3</span>
+              <span className='fnt'>
+                D video tutorials, special access mints, and more.
+              </span>
             </p>
 
             <div
-              className={`d-flex flex-row flex-wrap justify-content-center align-items-center`}>
+              className={`d-flex flex-row flex-wrap justify-content-center align-items-center fnt`}>
               <a
                 className={`jitb-style-btn d-flex flex-row align-items-center btn bg-color-main text-white text-uppercase my-4 m-2 p-4`}
                 href={'https://punksevolved.io/'}>
@@ -565,9 +618,9 @@ const Home = (props: HomeProps) => {
       <div
         className={`container-fluid socials d-flex flex-column 
             align-items-center px-3 px-md-5`}>
-        <h1 className='text-white mt-5 pt-5 pb-5'>Stay involved</h1>
+        <h1 className='text-white mt-5 pt-5 pb-5 fnt'>Stay involved</h1>
         <div
-          className={`d-flex flex-column flex-md-row  flex-wrap justify-content-around align-items-center`}>
+          className={`d-flex flex-column flex-md-row  flex-wrap justify-content-around align-items-center fnt`}>
           <a
             className={`jitb-style-btn d-flex flex-row align-items-center btn btn-light text-uppercase my-4 mx-2 p-5`}
             href={'https://jackintheblocks.io'}>
