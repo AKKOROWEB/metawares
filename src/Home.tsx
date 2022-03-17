@@ -541,7 +541,7 @@ const Home = (props: HomeProps) => {
               D project with the lowest mint price on Solana, as well as utility
               incentives via a
             </span>{' '}
-            10%
+           <span className='fnt-monospace'>10%</span>
             <span className='fnt'>
               royalty allocation to MetaWares Marketplace.
             </span>
@@ -583,7 +583,7 @@ const Home = (props: HomeProps) => {
               Evolved Holders after our snapshot post whitelist sale.
             </p>
             <p>
-              <span className='fnt'>Owning a card grants</span> <span>65%</span>{' '}
+              <span className='fnt'>Owning a card grants</span> <span className='fnt-monospace'>65%</span>{' '}
               <span className='fnt'>
                 royalty allocation to all aftermarket fees generated on
                 MetaWares marketplace, airdropped automatically each week.
@@ -644,7 +644,7 @@ const Home = (props: HomeProps) => {
         </div>
       </div>
       <div className={`d-flex flex-row justify-content-start px-4 mt-5`}>
-        <p className={`m-0 py-3`}>© COPYRIGHT METAWARES MARKETPLACE 2022</p>
+        <p className={`m-0 py-3 fnt-monospace`}>© COPYRIGHT METAWARES MARKETPLACE 2022</p>
       </div>
 
       <Snackbar
