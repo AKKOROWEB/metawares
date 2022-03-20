@@ -123,7 +123,7 @@ const Home = (props: HomeProps) => {
           });
         }
       }
-    } catch (error) {
+    } catch (error:any) {
       let message = error.msg || 'Minting failed! Please try again!';
       if (!error.msg) {
         if (!error.message) {
@@ -161,43 +161,33 @@ const Home = (props: HomeProps) => {
     refreshCandyMachineState,
   ]);
 
-  const SectionOneWrapper = styled.div`
-    background: url(https://cdn.discordapp.com/attachments/905542266549047336/950136697591574618/Just_concrete_optimized.png)
-      no-repeat top center cover;
-    height: 400px;
-  `;
-
   return (
     <div>
       {/* @ts-ignore */}
       <style jsx>
         {`
           @import url('http://fonts.cdnfonts.com/css/media-gothic');
-
+          iframe {
+            display: none;
+          }
           .bg-header {
             background: url('https://cdn.discordapp.com/attachments/905542266549047336/950136697591574618/Just_concrete_optimized.png')
               no-repeat top center;
             background-size: cover;
-            margin: 1rem 1rem 0;
-            border-radius: 0.5rem;
           }
           .jitb-bg {
-            background: url('https://cdn.discordapp.com/attachments/905542266549047336/950136697591574618/Just_concrete_optimized.png')
-              no-repeat top center;
-            background-size: cover;
-            border-radius: 0.5rem;
+            // background: url('https://cdn.discordapp.com/attachments/905542266549047336/950136697591574618/Just_concrete_optimized.png')
+            //   no-repeat top center;
+            // background-size: cover;
+            // border-radius: 0.5rem;
+            background-color: #ededed;
           }
           .header-h {
             height: 500px;
           }
-          iframe {
-            display: none;
-          }
           body {
             margin: 0;
-
             background-color: RGB(255, 255, 255) !important;
-            // max-width: 1920px;
             margin: 0 auto;
           }
           .fnt {
@@ -216,7 +206,7 @@ const Home = (props: HomeProps) => {
             font-size: 1.25rem;
           }
           .punk-font {
-            font-size: 2rem;
+            font-size: 2.75rem;
           }
           .Punks-Evolved-container {
             min-height: 37.5rem;
@@ -309,6 +299,41 @@ const Home = (props: HomeProps) => {
           .bg-color-main {
             background-color: #ef4116;
           }
+          .w-90 {
+            width: 70% !important;
+          }
+          .h-90 {
+            height: 70% !important;
+          }
+          .icon-size {
+            max-width: 400px;
+            max-height: 400px;
+            width: 100%;
+            height: 100%;
+          }
+          .mw-360 {
+            max-width: 360px;
+          }
+          .bar {
+            height: 3px;
+            max-width: 66%;
+            width: 100%;
+            background-color: #000;
+          }
+          .s-bar {
+            height: 3px;
+            max-width: 33%;
+            width: 100%;
+            background-color: #000;
+          }
+          . {
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: bold;
+          }
+          .section-wrap {
+            padding-left: 15%;
+            padding-right: 15%;
+          }
           @media screen and (max-width: 1200px) {
             .mint-section-box,
             .header-section,
@@ -345,41 +370,10 @@ const Home = (props: HomeProps) => {
               min-height: 37rem;
             }
           }
-          .w-90 {
-            width: 70% !important;
-          }
-          .h-90 {
-            height: 70% !important;
-          }
-          .icon-size {
-            max-width: 400px;
-            max-height: 400px;
-            width: 100%;
-            height: 100%;
-          }
-          .mw-360 {
-            max-width: 360px;
-          }
-          .bar {
-            height: 3px;
-            max-width: 66%;
-            width: 100%;
-            background-color: #000;
-          }
-          .s-bar {
-            height: 3px;
-            max-width: 33%;
-            width: 100%;
-            background-color: #000;
-          }
-          .fnt-monospace {
-            font-family: 'Courier New', Courier, monospace;
-            font-weight: bold;
-          }
         `}
       </style>
 
-      <div className='bg-header header-h d-flex flex-column flex-md-row align-items-center justify-content-start justify-content-md-around'>
+      <div className='bg-header header-h d-flex flex-column flex-md-row align-items-center justify-content-start justify-content-md-around mb-5'>
         <div className='col-10 col-md-4 px-3 order-1 order-md-0'>
           <div className='mw-360 w-100'>
             {!wallet.connected ? (
@@ -431,9 +425,9 @@ const Home = (props: HomeProps) => {
         </div>
         {/* </Paper> */}
       </div>
-      {/* SECTION TWO */}
-      <div className='d-flex flex-column justify-content-center align-items-center my-5'>
-        <h3 className='py-4 fnt fnt-color-main text-center'>
+      {/* SECTION TWO ABOUT */}
+      <div className='d-flex flex-column justify-content-center align-items-center my-5 section-wrap'>
+        <h3 className='py-4 mb-4 fnt fnt-color-main text-center '>
           Understanding Metawares
         </h3>
         <div className='bar'></div>
@@ -454,10 +448,10 @@ const Home = (props: HomeProps) => {
           />
         </div>
       </div>
-      {/* SECTION THREE */}
+      {/* SECTION THREE ROADMAP */}
       <div
         className={`roadmap mx-auto d-flex flex-row justify-content-center
-            align-items-center`}>
+            align-items-center my-5`}>
         <img
           className={`text-center w-100 h-100 d-flex d-lg-none`}
           src={
@@ -473,76 +467,78 @@ const Home = (props: HomeProps) => {
           alt='roadmap'
         />
       </div>
-      {/* SECTION FOUR */}
-      <div
-        className={`container-fluid d-flex flex-column flex-md-row justify-content-between align-items-center px-3 px-md-5 py-5 my-4`}>
-        <div className={`d-flex flex-column col col-md-6`}>
-          <h1 className={`punk-font fnt-color-main mb-5 fnt`}>
-            Punks Evolved?
-          </h1>
+      {/* SECTION FOUR PUNKS */}
+      <div className='section-wrap'>
+        <div
+          className={`container-fluid d-flex flex-column flex-md-row justify-content-between align-items-center py-5 my-4`}>
+          <div className={`d-flex flex-column col col-md-8`}>
+            <h1 className={`punk-font fnt-color-main mb-5 fnt`}>
+              Punks Evolved?
+            </h1>
 
-          <p className=''>
-            <span className='fnt'>
-              The genesis project to our ecosystem and the airdrop access card
-              to all of our projects, the first of which was Jack In The Blocks.
-              Punks Evolved Holders will also receive a MetaWares market Card as
-              an airdrop after the snapshot taken some time after our sale.
-              Punks Evolved also serves as one of our three utility NFTs which
-              grants a{' '}
-            </span>
-            <span className='fnt-monospace'>30%</span>{' '}
-            <span className='fnt'>
-              allocation to MetaWares Market royalties.
-            </span>
-          </p>
+            <p className=''>
+              <span className=''>
+                The genesis project to our ecosystem and the airdrop access card
+                to all of our projects, the first of which was Jack In The
+                Blocks. Punks Evolved Holders will also receive a MetaWares
+                market Card as an airdrop after the snapshot taken some time
+                after our sale. Punks Evolved also serves as one of our three
+                utility NFTs which grants a{' '}
+              </span>
+              <span className=''>30%</span>{' '}
+              <span className=''>
+                allocation to MetaWares Market royalties.
+              </span>
+            </p>
 
-          <div
-            className={`d-flex flex-row flex-wrap justify-content-center align-items-center fnt`}>
-            <a
-              className={`jitb-style-btn d-flex flex-row align-items-center btn bg-color-main text-white text-uppercase my-4 p-4`}
-              href={'http://discord.gg/s99MhhmttM'}>
-              Discord
-            </a>
-            <a
-              className={`jitb-style-btn d-flex flex-row align-items-center btn bg-color-main text-white text-uppercase my-4 m-2 p-4`}
-              href={'https://www.magiceden.io/marketplace/punks_evolved'}>
-              Magic Eden
-            </a>
-            <a
-              className={`jitb-style-btn d-flex flex-row align-items-center btn bg-color-main text-white text-uppercase my-4 m-2 p-4`}
-              href={'https://twitter.com/punksevolved'}>
-              Twitter
-            </a>
+            <div
+              className={`d-flex flex-row flex-wrap justify-content-center align-items-center fnt`}>
+              <a
+                className={`jitb-style-btn d-flex flex-row align-items-center btn bg-color-main text-white text-uppercase my-4 p-4`}
+                href={'http://discord.gg/s99MhhmttM'}>
+                Discord
+              </a>
+              <a
+                className={`jitb-style-btn d-flex flex-row align-items-center btn bg-color-main text-white text-uppercase my-4 m-2 p-4`}
+                href={'https://www.magiceden.io/marketplace/punks_evolved'}>
+                Magic Eden
+              </a>
+              <a
+                className={`jitb-style-btn d-flex flex-row align-items-center btn bg-color-main text-white text-uppercase my-4 m-2 p-4`}
+                href={'https://twitter.com/punksevolved'}>
+                Twitter
+              </a>
+            </div>
           </div>
+          <img
+            src='https://cdn.discordapp.com/attachments/905542266549047336/950182768254525510/Punk_Icon-01.png'
+            className='icon-size col-4 ms-3 ms-md-5'
+          />
         </div>
-        <img
-          src='https://cdn.discordapp.com/attachments/905542266549047336/950182768254525510/Punk_Icon-01.png'
-          className='icon-size col-6 ms-3 ms-md-5'
-        />
       </div>
-      {/* SECTION FIVE */}
+      {/* SECTION FIVE JACKS*/}
       <div
-        className={`container-fluid jitb-bg d-flex flex-column flex-md-row justify-content-between align-items-center px-3 px-md-5 py-5 my-5`}>
+        className={`container-fluid jitb-bg d-flex flex-column flex-md-row justify-content-between align-items-center section-wrap py-5 my-5`}>
         <img
           src='https://cdn.discordapp.com/attachments/905542266549047336/950182786919170098/Jacks_Icon-01.png'
-          className='icon-size col-6 me-3 me-md-5'
+          className='icon-size col-4 me-3 me-md-5'
         />
-        <div className={`d-flex flex-column col col-md-6`}>
+        <div className={`d-flex flex-column col col-md-8`}>
           <h1 className={`punk-font mb-5 fnt-color-main fnt`}>
             Jack in The Blocks?
           </h1>
           <p>
-            <span className='fnt'>
+            <span className='ft'>
               The second project in our ecosystem and the first airdrop to Punks
               Evolved holders. Owning a Jack is owning a AAA
             </span>{' '}
-            <span className='fnt-monospace'>3</span>
-            <span className='fnt'>
+            <span className=''>3</span>
+            <span className=''>
               D project with the lowest mint price on Solana, as well as utility
               incentives via a
             </span>{' '}
-           <span className='fnt-monospace'>10%</span>
-            <span className='fnt'>
+            <span className=''>10%</span>
+            <span className=''>
               royalty allocation to MetaWares Marketplace.
             </span>
           </p>
@@ -567,8 +563,8 @@ const Home = (props: HomeProps) => {
           </div>
         </div>
       </div>
-      {/* SECTION SIX */}
-      <div className='d-flex flex-column justify-content-center align-items-center py-5'>
+      {/* SECTION SIX MORE */}
+      <div className='d-flex flex-column justify-content-center align-items-center py-5 section-wrap'>
         <h1 className={`punk-font mb-5 fnt-color-main text-center fnt`}>
           A DEEPER COMPREHENSIVE
         </h1>
@@ -577,25 +573,26 @@ const Home = (props: HomeProps) => {
         <div className='s-bar'></div>
         <div
           className={`container-fluid d-flex flex-column flex-md-row justify-content-around align-items-center px-3 px-md-5 py-5 my-4`}>
-          <div className={`d-flex flex-column col col-md-4`}>
-            <p className='fnt'>
+          <div className={`d-flex flex-column col col-md-6`}>
+            <p className=''>
               Our Third and final project in our ecosystem, airdropped to Punks
               Evolved Holders after our snapshot post whitelist sale.
             </p>
             <p>
-              <span className='fnt'>Owning a card grants</span> <span className='fnt-monospace'>65%</span>{' '}
-              <span className='fnt'>
+              <span className=''>Owning a card grants</span>{' '}
+              <span className=''>65%</span>{' '}
+              <span className=''>
                 royalty allocation to all aftermarket fees generated on
                 MetaWares marketplace, airdropped automatically each week.
               </span>
             </p>
             <p>
-              <span className='fnt'>
+              <span className=''>
                 It will also secure you to all future benefits the marketplace
                 holds such as{' '}
               </span>{' '}
-              <span className='fnt-monospace'>3</span>
-              <span className='fnt'>
+              <span className=''>3</span>
+              <span className=''>
                 D video tutorials, special access mints, and more.
               </span>
             </p>
@@ -611,10 +608,11 @@ const Home = (props: HomeProps) => {
           </div>
           <img
             src='https://cdn.discordapp.com/attachments/905542266549047336/938979994720428102/unknown.png'
-            className='icon-size col-6 ms-0 ms-md-5'
+            className='icon-size col-4 ms-0 ms-md-5'
           />
         </div>
       </div>
+      {/* SOCIAL ICONS */}
       <div
         className={`container-fluid socials d-flex flex-column 
             align-items-center px-3 px-md-5`}>
@@ -644,7 +642,7 @@ const Home = (props: HomeProps) => {
         </div>
       </div>
       <div className={`d-flex flex-row justify-content-start px-4 mt-5`}>
-        <p className={`m-0 py-3 fnt-monospace`}>© COPYRIGHT METAWARES MARKETPLACE 2022</p>
+        <p className={`m-0 py-3 `}>© COPYRIGHT METAWARES MARKETPLACE 2022</p>
       </div>
 
       <Snackbar
