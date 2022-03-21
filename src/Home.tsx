@@ -162,7 +162,7 @@ const Home = (props: HomeProps) => {
   ]);
 
   return (
-    <div>
+    <>
       {/* @ts-ignore */}
       <style jsx>
         {`
@@ -224,9 +224,9 @@ const Home = (props: HomeProps) => {
             background-color: #ef4116;
           }
           .jitb-style-btn {
-            height: 75px;
+            height: 4.6875rem;
             font-size: 1.5rem;
-            width: 300px;
+            width: 18.75rem;
             text-align: center;
             justify-content: center;
           }
@@ -241,7 +241,7 @@ const Home = (props: HomeProps) => {
           }
           .mint-section-icons {
             z-index: 2;
-            padding: 3px 1rem;
+            padding: 0.1875rem 1rem;
           }
           .header-section {
             height: 100%;
@@ -253,16 +253,16 @@ const Home = (props: HomeProps) => {
           }
           .logo {
             height: 100%;
-            min-height: 400px;
-            max-height: 800px;
+            min-height: 25rem;
+            max-height: 50rem;
             left: 0;
           }
           .zin-1 {
             z-index: 1;
           }
           .js-font {
-            min-width: 300px;
-            max-height: 800px;
+            min-width: 18.75rem;
+            max-height: 50rem;
             z-index: 2;
           }
           .js-font img {
@@ -271,22 +271,22 @@ const Home = (props: HomeProps) => {
             text-align: center;
           }
           .preview-gif {
-            max-height: 300px;
-            max-width: 300px;
+            max-height: 18.75rem;
+            max-width: 18.75rem;
           }
           .logo img {
             object-fit: cover;
           }
           svg {
-            width: 32px;
-            height: 32px;
+            width: 2rem;
+            height: 2rem;
             color: #fff;
-            margin: 5px;
+            margin: 0.3125rem;
           }
           .collage-img {
             min-height: 360px;
-            min-width: 360px;
-            max-width: 1200px;
+            min-width: 22.5rem;
+            max-width: 75rem;
           }
           .nft-percent {
             z-index: 5;
@@ -306,22 +306,22 @@ const Home = (props: HomeProps) => {
             height: 70% !important;
           }
           .icon-size {
-            max-width: 400px;
-            max-height: 400px;
+            max-width: 25rem;
+            max-height: 25rem;
             width: 100%;
             height: 100%;
           }
           .mw-360 {
-            max-width: 360px;
+            max-width: 22.5rem;
           }
           .bar {
-            height: 3px;
+            height: 0.1875rem;
             max-width: 66%;
             width: 100%;
             background-color: #000;
           }
           .s-bar {
-            height: 3px;
+            height: 0.1875rem;
             max-width: 33%;
             width: 100%;
             background-color: #000;
@@ -339,8 +339,8 @@ const Home = (props: HomeProps) => {
             .header-section,
             .logo-xl {
               height: 100%;
-              min-height: 1000px;
-              max-height: 1200px;
+              min-height: 62.5rem;
+              max-height: 75rem;
             }
           }
           @media screen and (max-width: 768px) {
@@ -355,8 +355,8 @@ const Home = (props: HomeProps) => {
             .header-section,
             .logo-xl {
               height: 100%;
-              min-height: 800px;
-              max-height: 1200px;
+              min-height: 50rem;
+              max-height: 75rem;
             }
             .header-section {
               background: url('https://cdn.discordapp.com/attachments/905542266549047336/930576006455111691/banner_for_minting_website.jpg')
@@ -606,10 +606,13 @@ const Home = (props: HomeProps) => {
               </a>
             </div>
           </div>
-          <img
-            src='https://cdn.discordapp.com/attachments/905542266549047336/938979994720428102/unknown.png'
-            className='icon-size col-4 ms-0 ms-md-5'
-          />
+          <video autoPlay loop className='icon-size col-4 ms-0 ms-md-5'>
+            {' '}
+            <source
+              src='https://ipfs.io/ipfs/QmXY9fwcT6p7wMhvUrBBgF9A96dn4SEzaWpy1BAKGUX7Bp'
+              type='video/mp4'
+            />
+          </video>
         </div>
       </div>
       {/* SOCIAL ICONS */}
@@ -655,7 +658,7 @@ const Home = (props: HomeProps) => {
           {alertState.message}
         </Alert>
       </Snackbar>
-    </div>
+    </>
   );
 };
 
