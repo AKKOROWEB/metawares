@@ -565,7 +565,7 @@ const Home = (props: HomeProps) => {
       </div>
       {/* SECTION SIX MORE */}
       <div className='d-flex flex-column justify-content-center align-items-center py-5 section-wrap'>
-        <h1 className={`punk-font mb-5 fnt-color-main text-center fnt`}>
+        <h1 className={` mb-5 fnt-color-main text-center fnt`}>
           A DEEPER COMPREHENSIVE
         </h1>
         <div className='bar'></div>
