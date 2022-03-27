@@ -167,8 +167,7 @@ const Home = (props: HomeProps) => {
     if (ref.current) {
       ref.current.play();
     }
-  }, [
-  ]);
+  }, []);
 
   return (
     <>
@@ -232,10 +231,10 @@ const Home = (props: HomeProps) => {
             min-height: 500px;
             background-color: #ef4116;
           }
-          .jitb-style-btn {
-            height: 4.6875rem;
-            font-size: 1.5rem;
-            width: 18.75rem;
+          .style-btn {
+            height: 3.6875rem;
+            font-size: 1rem;
+            width: 12.75rem;
             text-align: center;
             justify-content: center;
           }
@@ -493,63 +492,62 @@ const Home = (props: HomeProps) => {
             <div
               className={`d-flex flex-row flex-wrap justify-content-center align-items-center fnt`}>
               <a
-                className={`jitb-style-btn d-flex flex-row align-items-center btn bg-color-main text-white text-uppercase my-4 p-4`}
+                className={`style-btn d-flex flex-row align-items-center btn bg-color-main text-white text-uppercase my-4 p-4`}
                 href={'http://discord.gg/s99MhhmttM'}>
                 Discord
               </a>
               <a
-                className={`jitb-style-btn d-flex flex-row align-items-center btn bg-color-main text-white text-uppercase my-4 m-2 p-4`}
+                className={`style-btn d-flex flex-row align-items-center btn bg-color-main text-white text-uppercase my-4 m-2 p-4`}
                 href={'https://www.magiceden.io/marketplace/punks_evolved'}>
                 Magic Eden
               </a>
               <a
-                className={`jitb-style-btn d-flex flex-row align-items-center btn bg-color-main text-white text-uppercase my-4 m-2 p-4`}
+                className={`style-btn d-flex flex-row align-items-center btn bg-color-main text-white text-uppercase my-4 m-2 p-4`}
                 href={'https://twitter.com/punksevolved'}>
                 Twitter
               </a>
             </div>
           </div>
-          <img src='./Punk_Icon.png' className='icon-size col-4 ms-3 ms-md-5' />
+          <img
+            src='./Punk_Icon.png'
+            className='icon-size col-4 my-5 ms-3 ms-md-5'
+          />
         </div>
       </div>
       {/* SECTION FIVE JACKS*/}
       <div
         className={`container-fluid jitb-bg d-flex flex-column flex-md-row justify-content-between align-items-center section-wrap py-5 my-5`}>
-        <img src='./Jacks_Icon.png' className='icon-size col-4 me-3 me-md-5' />
+        <img
+          src='./Jacks_Icon.png'
+          className='icon-size col-4 my-5 me-3 me-md-5'
+        />
         <div className={`d-flex flex-column col col-md-8`}>
-          <h1 className={`punk-font mb-5 fnt-color-main fnt`}>
+          <h1 className={`punk-font my-5 fnt-color-main fnt`}>
             Jack in The Blocks?
           </h1>
           <p>
             <span className='ft'>
               The second project in our ecosystem and the first airdrop to Punks
-              Evolved holders. Owning a Jack is owning a AAA
-            </span>{' '}
-            <span className=''>3</span>
-            <span className=''>
-              D project with the lowest mint price on Solana, as well as utility
-              incentives via a
-            </span>{' '}
-            <span className=''>10%</span>
-            <span className=''>
-              royalty allocation to MetaWares Marketplace.
+              Evolved holders. Owning a Jack is owning a AAA 3 D project with
+              the lowest mint price on Solana, as well as utility incentives via
+              a 10% royalty allocation to MetaWares Marketplace.
             </span>
           </p>
 
           <div
             className={`d-flex flex-row flex-wrap justify-content-center align-items-center`}>
             <a
-              className={`jitb-style-btn d-flex flex-row align-items-center btn bg-color-main text-white text-uppercase my-4 p-4 fnt`}
+              className={`style-btn d-flex flex-row align-items-center btn bg-color-main text-white text-uppercase my-4 p-4 fnt`}
               href={'http://discord.gg/s99MhhmttM'}>
               Discord
             </a>
             <a
-              className={`jitb-style-btn d-flex flex-row align-items-center btn bg-color-main text-white text-uppercase my-4 m-2 p-4 fnt`}
+              className={`style-btn d-flex flex-row align-items-center btn bg-color-main text-white text-uppercase my-4 m-2 p-4 fnt`}
               href={'https://jacksevolved.io/'}>
               Mint
             </a>
             <a
-              className={`jitb-style-btn d-flex flex-row align-items-center btn bg-color-main text-white text-uppercase my-4 m-2 p-4 fnt`}
+              className={`style-btn d-flex flex-row align-items-center btn bg-color-main text-white text-uppercase my-4 m-2 p-4 fnt`}
               href={'https://twitter.com/punksevolved'}>
               Twitter
             </a>
@@ -593,7 +591,7 @@ const Home = (props: HomeProps) => {
             <div
               className={`d-flex flex-row flex-wrap justify-content-center align-items-center fnt`}>
               <a
-                className={`jitb-style-btn d-flex flex-row align-items-center btn bg-color-main text-white text-uppercase my-4 m-2 p-4`}
+                className={`style-btn d-flex flex-row align-items-center btn bg-color-main text-white text-uppercase my-4 m-2 p-4`}
                 href={'https://punksevolved.io/'}>
                 Read Article
               </a>
@@ -616,22 +614,22 @@ const Home = (props: HomeProps) => {
         <div
           className={`d-flex flex-column flex-md-row  flex-wrap justify-content-around align-items-center fnt`}>
           <a
-            className={`jitb-style-btn d-flex flex-row align-items-center btn btn-light text-uppercase my-4 mx-2 p-5`}
+            className={`style-btn d-flex flex-row align-items-center btn btn-light text-uppercase my-4 mx-2`}
             href={'https://jackintheblocks.io'}>
             Mint A Jack
           </a>
           <a
-            className={`jitb-style-btn d-flex flex-row align-items-center btn btn-light text-uppercase my-4 mx-2 p-5`}
+            className={`style-btn d-flex flex-row align-items-center btn btn-light text-uppercase my-4 mx-2`}
             href={'https://discord.gg/s99MhhmttM'}>
             Discord
           </a>
           <a
-            className={`jitb-style-btn d-flex flex-row align-items-center btn btn-light text-uppercase my-4 mx-2 p-5`}
+            className={`style-btn d-flex flex-row align-items-center btn btn-light text-uppercase my-4 mx-2`}
             href={'https://twitter.com/MetaWaresMarket'}>
             Twitter
           </a>
           <a
-            className={`jitb-style-btn d-flex flex-row align-items-center btn btn-light text-uppercase my-4 mx-2 p-5`}
+            className={`style-btn d-flex flex-row align-items-center btn btn-light text-uppercase my-4 mx-2`}
             href={'https://www.magiceden.io/marketplace/punks_evolved'}>
             Magic Eden
           </a>
