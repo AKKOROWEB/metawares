@@ -1,4 +1,4 @@
-import {useEffect, useMemo, useState, useCallback} from 'react';
+import {useEffect, useMemo, useState, useCallback, useRef} from 'react';
 import * as anchor from '@project-serum/anchor';
 
 import styled from 'styled-components';
@@ -42,6 +42,8 @@ export interface HomeProps {
 }
 
 const Home = (props: HomeProps) => {
+  const ref = useRef<HTMLVideoElement>(null);
+
   const [isUserMinting, setIsUserMinting] = useState(false);
   const [candyMachine, setCandyMachine] = useState<CandyMachineAccount>();
   const [alertState, setAlertState] = useState<AlertState>({
@@ -123,8 +125,7 @@ const Home = (props: HomeProps) => {
           });
         }
       }
-    } catch (error: any) {
-      
+    } catch (error:any) {
       let message = error.msg || 'Minting failed! Please try again!';
       if (!error.msg) {
         if (!error.message) {
@@ -162,6 +163,13 @@ const Home = (props: HomeProps) => {
     refreshCandyMachineState,
   ]);
 
+  useEffect(() => {
+    if (ref.current) {
+      ref.current.play();
+    }
+  }, [
+  ]);
+
   return (
     <>
       {/* @ts-ignore */}
@@ -172,8 +180,8 @@ const Home = (props: HomeProps) => {
             display: none;
           }
           .bg-header {
-            background: url('./Just_concrete_optimized.png');
-              no-repeat top center;
+            background: url('./Just_concrete_optimized.png') no-repeat top
+              center;
             background-size: cover;
           }
           .jitb-bg {
@@ -244,7 +252,7 @@ const Home = (props: HomeProps) => {
             z-index: 2;
             padding: 0.1875rem 1rem;
           }
-  
+
           .logo {
             height: 100%;
             min-height: 25rem;
@@ -412,10 +420,7 @@ const Home = (props: HomeProps) => {
           </div>
         </div>
         <div className='col-10 col-md-4  d-flex justify-content-center justify-content-md-end p-0 pe-md-5 order-0 order-md-1 align-items-center'>
-          <img
-            className=' w-90 h-90'
-            src='./metawares.png'
-          />
+          <img className=' w-90 h-90' src='./metawares.png' />
         </div>
         {/* </Paper> */}
       </div>
@@ -504,19 +509,13 @@ const Home = (props: HomeProps) => {
               </a>
             </div>
           </div>
-          <img
-            src='./Punk_Icon.png'
-            className='icon-size col-4 ms-3 ms-md-5'
-          />
+          <img src='./Punk_Icon.png' className='icon-size col-4 ms-3 ms-md-5' />
         </div>
       </div>
       {/* SECTION FIVE JACKS*/}
       <div
         className={`container-fluid jitb-bg d-flex flex-column flex-md-row justify-content-between align-items-center section-wrap py-5 my-5`}>
-        <img
-          src='./Jacks_Icon.png'
-          className='icon-size col-4 me-3 me-md-5'
-        />
+        <img src='./Jacks_Icon.png' className='icon-size col-4 me-3 me-md-5' />
         <div className={`d-flex flex-column col col-md-8`}>
           <h1 className={`punk-font mb-5 fnt-color-main fnt`}>
             Jack in The Blocks?
@@ -600,7 +599,7 @@ const Home = (props: HomeProps) => {
               </a>
             </div>
           </div>
-          <video autoPlay loop className='icon-size col-4 ms-0 ms-md-5'>
+          <video ref={ref} loop className='icon-size col-4 ms-0 ms-md-5'>
             {' '}
             <source
               src='https://ipfs.io/ipfs/QmXY9fwcT6p7wMhvUrBBgF9A96dn4SEzaWpy1BAKGUX7Bp'
