@@ -47,8 +47,8 @@ const VideoPlayer = ({ src, controls = false, autoplay = true }) => {
   const playerRef = usePlayer({ src, controls, autoplay });
 
   return (
-    <div>
-      <video  />
+    <div data-vjs-player>
+      <video ref={playerRef} className="video-js" />
     </div>
   );
 };
@@ -61,7 +61,7 @@ VideoPlayer.propTypes = {
 
 VideoPlayer.defaultProps = {
   controls: false,
-  autoplay: true
+  autoplay: 
 };
 
 export default VideoPlayer;

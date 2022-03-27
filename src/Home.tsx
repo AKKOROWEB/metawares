@@ -125,7 +125,7 @@ const Home = (props: HomeProps) => {
           });
         }
       }
-    } catch (error:any) {
+    } catch (error) {
       let message = error.msg || 'Minting failed! Please try again!';
       if (!error.msg) {
         if (!error.message) {
@@ -164,10 +164,17 @@ const Home = (props: HomeProps) => {
   ]);
 
   useEffect(() => {
-    if (ref.current) {
-      ref.current.play();
+    if (ref !== null && ref.current !== null) {
+      const handleVideo = async (): Promise<void> => {
+        const video: any = await document.querySelector('.js-video');
+        await ref.current?.play();
+        await video?.play();
+        video.loop = true;
+        video.autoplay = true;
+      };
+      handleVideo();
     }
-  }, []);
+  }, [ref]);
 
   return (
     <>
@@ -597,7 +604,10 @@ const Home = (props: HomeProps) => {
               </a>
             </div>
           </div>
-          <video ref={ref} loop className='icon-size col-4 ms-0 ms-md-5'>
+          <video
+            ref={ref}
+            loop
+            className='js-video icon-size col-4 ms-0 ms-md-5'>
             {' '}
             <source
               src='https://ipfs.io/ipfs/QmXY9fwcT6p7wMhvUrBBgF9A96dn4SEzaWpy1BAKGUX7Bp'
