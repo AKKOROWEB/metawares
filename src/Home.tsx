@@ -1,3 +1,4 @@
+//@ts-nocheck
 import {useEffect, useMemo, useState, useCallback, useRef} from 'react';
 import * as anchor from '@project-serum/anchor';
 
@@ -163,19 +164,6 @@ const Home = (props: HomeProps) => {
     refreshCandyMachineState,
   ]);
 
-  useEffect(() => {
-    if (ref !== null && ref.current !== null) {
-      const handleVideo = async (): Promise<void> => {
-        const video: any = await document.querySelector('.js-video');
-        await ref.current?.play();
-        await video?.play();
-        video.loop = true;
-        video.autoplay = true;
-      };
-      handleVideo();
-    }
-  }, [ref]);
-
   return (
     <>
       {/* @ts-ignore */}
@@ -190,11 +178,7 @@ const Home = (props: HomeProps) => {
               center;
             background-size: cover;
           }
-          .jitb-bg {
-            // background: url('https://cdn.discordapp.com/attachments/905542266549047336/950136697591574618/Just_concrete_optimized.png')
-            //   no-repeat top center;
-            // background-size: cover;
-            // border-radius: 0.5rem;
+          .grey-bg {
             background-color: #ededed;
           }
           .header-h {
@@ -220,8 +204,17 @@ const Home = (props: HomeProps) => {
           p {
             font-size: 1.25rem;
           }
+
+          .about-my {
+            margin-top: 10% !important;
+            margin-bottom: 10% !important;
+          }
+          .punks-py {
+            padding-top: 10% !important;
+            padding-bottom: 10% !important;
+          }
           .punk-font {
-            font-size: 2.75rem;
+            font-size: 3.75rem;
           }
           .Punks-Evolved-container {
             min-height: 37.5rem;
@@ -339,6 +332,8 @@ const Home = (props: HomeProps) => {
             font-weight: bold;
           }
           .section-wrap {
+            margin-top: 10%;
+            margin-bottom: 10%;
             padding-left: 15%;
             padding-right: 15%;
           }
@@ -350,12 +345,18 @@ const Home = (props: HomeProps) => {
               min-height: 62.5rem;
               max-height: 75rem;
             }
+            .punk-font {
+              font-size: 2.75rem;
+            }
           }
           @media screen and (max-width: 768px) {
             .header-section {
               background: url('https://cdn.discordapp.com/attachments/905542266549047336/930576006455111691/banner_for_minting_website.jpg')
                 no-repeat top right;
               background-size: cover;
+            }
+            .punk-font {
+              font-size: 1.75rem;
             }
           }
           @media screen and (max-width: 576px) {
@@ -431,8 +432,8 @@ const Home = (props: HomeProps) => {
         {/* </Paper> */}
       </div>
       {/* SECTION TWO ABOUT */}
-      <div className='d-flex flex-column justify-content-center align-items-center my-5 section-wrap'>
-        <h3 className='py-4 mb-4 fnt fnt-color-main text-center '>
+      <div className='about-my d-flex flex-column justify-content-center align-items-center section-wrap'>
+        <h3 className='py-4 mb-4 punk-font fnt fnt-color-main text-center '>
           Understanding Metawares
         </h3>
         <div className='bar'></div>
@@ -472,10 +473,63 @@ const Home = (props: HomeProps) => {
           alt='roadmap'
         />
       </div>
-      {/* SECTION FOUR PUNKS */}
-      <div className='section-wrap'>
+      {/* SECTION SIX MORE */}
+      <div className='d-flex flex-column justify-content-center align-items-center py-5 section-wrap'>
+        <h1 className={` mb-5 punk-font fnt-color-main text-center fnt`}>
+          A DEEPER COMPREHENSIVE
+        </h1>
+        <div className='bar'></div>
+        <br />
+        <div className='s-bar'></div>
         <div
-          className={`container-fluid d-flex flex-column flex-md-row justify-content-between align-items-center py-5 my-4`}>
+          className={`container-fluid d-flex flex-column flex-md-row justify-content-around align-items-center px-3 px-md-5 py-5 my-4`}>
+          <div className={`d-flex flex-column col col-md-6`}>
+            <p className=''>
+              Our Third and final project in our ecosystem, airdropped to Punks
+              Evolved Holders after our snapshot post whitelist sale.
+            </p>
+            <p>
+              <span className=''>Owning a card grants</span>{' '}
+              <span className=''>65%</span>{' '}
+              <span className=''>
+                royalty allocation to all aftermarket fees generated on
+                MetaWares marketplace, airdropped automatically each week.
+              </span>
+            </p>
+            <p>
+              <span className=''>
+                It will also secure you to all future benefits the marketplace
+                holds such as{' '}
+              </span>{' '}
+              <span className=''>3</span>
+              <span className=''>
+                D video tutorials, special access mints, and more.
+              </span>
+            </p>
+
+            <div
+              className={`d-flex flex-row flex-wrap justify-content-center align-items-center fnt`}>
+              <a
+                className={`style-btn d-flex flex-row align-items-center btn bg-color-main text-white text-uppercase my-4 m-2 p-4`}
+                href={'https://punksevolved.io/'}>
+                Read Article
+              </a>
+            </div>
+          </div>
+          <video
+            autoPlay
+            loop
+            muted
+            className='js-video icon-size col-4 ms-0 ms-md-5'>
+            {' '}
+            <source src='./metawares.mp4' type='video/mp4' />
+          </video>
+        </div>
+      </div>
+      {/* SECTION FOUR PUNKS */}
+      <div className='section-wrap punks-py grey-bg '>
+        <div
+          className={`container-fluid d-flex flex-column flex-md-row justify-content-between align-items-center about-my`}>
           <div className={`d-flex flex-column col col-md-8`}>
             <h1 className={`punk-font fnt-color-main mb-5 fnt`}>
               Punks Evolved
@@ -523,7 +577,7 @@ const Home = (props: HomeProps) => {
       </div>
       {/* SECTION FIVE JACKS*/}
       <div
-        className={`container-fluid jitb-bg d-flex flex-column flex-md-row justify-content-between align-items-center section-wrap py-5 my-5`}>
+        className={`container-fluid jitb-bg d-flex flex-column flex-md-row justify-content-between align-items-center section-wrap punks-py`}>
         <img
           src='./Jacks_Icon.png'
           className='icon-size col-4 my-5 me-3 me-md-5'
@@ -561,61 +615,7 @@ const Home = (props: HomeProps) => {
           </div>
         </div>
       </div>
-      {/* SECTION SIX MORE */}
-      <div className='d-flex flex-column justify-content-center align-items-center py-5 section-wrap'>
-        <h1 className={` mb-5 fnt-color-main text-center fnt`}>
-          A DEEPER COMPREHENSIVE
-        </h1>
-        <div className='bar'></div>
-        <br />
-        <div className='s-bar'></div>
-        <div
-          className={`container-fluid d-flex flex-column flex-md-row justify-content-around align-items-center px-3 px-md-5 py-5 my-4`}>
-          <div className={`d-flex flex-column col col-md-6`}>
-            <p className=''>
-              Our Third and final project in our ecosystem, airdropped to Punks
-              Evolved Holders after our snapshot post whitelist sale.
-            </p>
-            <p>
-              <span className=''>Owning a card grants</span>{' '}
-              <span className=''>65%</span>{' '}
-              <span className=''>
-                royalty allocation to all aftermarket fees generated on
-                MetaWares marketplace, airdropped automatically each week.
-              </span>
-            </p>
-            <p>
-              <span className=''>
-                It will also secure you to all future benefits the marketplace
-                holds such as{' '}
-              </span>{' '}
-              <span className=''>3</span>
-              <span className=''>
-                D video tutorials, special access mints, and more.
-              </span>
-            </p>
 
-            <div
-              className={`d-flex flex-row flex-wrap justify-content-center align-items-center fnt`}>
-              <a
-                className={`style-btn d-flex flex-row align-items-center btn bg-color-main text-white text-uppercase my-4 m-2 p-4`}
-                href={'https://punksevolved.io/'}>
-                Read Article
-              </a>
-            </div>
-          </div>
-          <video
-            ref={ref}
-            loop
-            className='js-video icon-size col-4 ms-0 ms-md-5'>
-            {' '}
-            <source
-              src='https://ipfs.io/ipfs/QmXY9fwcT6p7wMhvUrBBgF9A96dn4SEzaWpy1BAKGUX7Bp'
-              type='video/mp4'
-            />
-          </video>
-        </div>
-      </div>
       {/* SOCIAL ICONS */}
       <div
         className={`container-fluid socials d-flex flex-column 
