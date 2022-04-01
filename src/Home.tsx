@@ -165,7 +165,7 @@ const Home = (props: HomeProps) => {
   ]);
 
   return (
-    <>
+    <main>
       {/* @ts-ignore */}
       <style jsx>
         {`
@@ -206,12 +206,12 @@ const Home = (props: HomeProps) => {
           }
 
           .about-my {
-            margin-top: 10% !important;
-            margin-bottom: 10% !important;
+            // padding-top: 5% !important;
+            padding-bottom: 5% !important;
           }
           .punks-py {
-            padding-top: 10% !important;
-            padding-bottom: 10% !important;
+            padding-top: 8% !important;
+            padding-bottom: 8% !important;
           }
           .punk-font {
             font-size: 3.75rem;
@@ -319,23 +319,23 @@ const Home = (props: HomeProps) => {
             height: 0.1875rem;
             max-width: 66%;
             width: 100%;
-            background-color: #000;
+            background-color: grey;
           }
           .s-bar {
             height: 0.1875rem;
             max-width: 33%;
             width: 100%;
-            background-color: #000;
+            background-color: grey;
           }
           . {
             font-family: 'Courier New', Courier, monospace;
             font-weight: bold;
           }
           .section-wrap {
-            margin-top: 10%;
-            margin-bottom: 10%;
-            padding-left: 15%;
-            padding-right: 15%;
+            margin-top: 5%;
+            margin-bottom: 5%;
+            padding-left: 5rem;
+            padding-right: 5rem;
           }
           @media screen and (max-width: 1200px) {
             .mint-section-box,
@@ -438,8 +438,8 @@ const Home = (props: HomeProps) => {
         </h3>
         <div className='bar'></div>
         <br />
-        <div className='s-bar'></div>
-        <div className='d-flex flex-column flex-md-row align-items-center justify-content-between justify-content-md-center pt-3 pb-5'>
+        <div className='s-bar mb-5'></div>
+        <div className='d-flex flex-column flex-md-row align-items-center justify-content-between justify-content-md-center pt-3 pb-5 mt-5'>
           <img
             className='col-12 col-sm-8 col-md-4 my-3'
             src='https://cdn.discordapp.com/attachments/905542266549047336/950190179912667166/Implement_Blurb-01.png'
@@ -474,16 +474,16 @@ const Home = (props: HomeProps) => {
         />
       </div>
       {/* SECTION SIX MORE */}
-      <div className='d-flex flex-column justify-content-center align-items-center py-5 section-wrap'>
+      <div className='d-flex flex-column pt-5 pb-3 section-wrap'>
         <h1 className={` mb-5 punk-font fnt-color-main text-center fnt`}>
           A DEEPER COMPREHENSIVE
         </h1>
-        <div className='bar'></div>
+        <div className='bar mx-auto'></div>
         <br />
-        <div className='s-bar'></div>
+        <div className='s-bar mb-5 mx-auto'></div>
         <div
-          className={`container-fluid d-flex flex-column flex-md-row justify-content-around align-items-center px-3 px-md-5 py-5 my-4`}>
-          <div className={`d-flex flex-column col col-md-6`}>
+          className={`container-fluid d-flex flex-column flex-lg-row justify-content-around align-items-center px-3 px-md-5 py-5 mt-5`}>
+          <div className={`d-flex flex-column mb-5 col col-lg-6`}>
             <p className=''>
               Our Third and final project in our ecosystem, airdropped to Punks
               Evolved Holders after our snapshot post whitelist sale.
@@ -508,7 +508,7 @@ const Home = (props: HomeProps) => {
             </p>
 
             <div
-              className={`d-flex flex-row flex-wrap justify-content-center align-items-center fnt`}>
+              className={`d-none d-lg-flex flex-row flex-wrap justify-content-left align-items-center fnt `}>
               <a
                 className={`style-btn d-flex flex-row align-items-center btn bg-color-main text-white text-uppercase my-4 m-2 p-4`}
                 href={'https://punksevolved.io/'}>
@@ -520,17 +520,25 @@ const Home = (props: HomeProps) => {
             autoPlay
             loop
             muted
-            className='js-video icon-size col-4 ms-0 ms-md-5'>
+            className='js-video icon-size col-4  mt-5 my-lg-0  ms-0 ms-md-5'>
             {' '}
             <source src='./metawares.mp4' type='video/mp4' />
           </video>
         </div>
+        <div
+              className={`d-flex d-lg-none  flex-row flex-wrap justify-content-center align-items-center fnt`}>
+              <a
+                className={`style-btn d-flex flex-row align-items-center btn bg-color-main text-white text-uppercase my-4 m-2 p-4`}
+                href={'https://punksevolved.io/'}>
+                Read Article
+              </a>
+            </div>
       </div>
       {/* SECTION FOUR PUNKS */}
-      <div className='section-wrap punks-py grey-bg '>
+      <div className='d-flex flex-column  container-fluid grey-bg section-wrap about-my'>
         <div
-          className={`container-fluid d-flex flex-column flex-md-row justify-content-between align-items-center about-my`}>
-          <div className={`d-flex flex-column col col-md-8`}>
+          className={`d-flex flex-column flex-lg-row justify-content-between align-items-center  punks-py`}>
+          <div className={`d-flex flex-column col col-lg-6`}>
             <h1 className={`punk-font fnt-color-main mb-5 fnt`}>
               Punks Evolved
             </h1>
@@ -551,7 +559,7 @@ const Home = (props: HomeProps) => {
             </p>
 
             <div
-              className={`d-flex flex-row flex-wrap justify-content-center align-items-center fnt`}>
+              className={`d-none d-lg-flex flex-row flex-wrap justify-content-left align-items-center fnt`}>
               <a
                 className={`style-btn d-flex flex-row align-items-center btn bg-color-main text-white text-uppercase my-4 p-4`}
                 href={'http://discord.gg/s99MhhmttM'}>
@@ -569,50 +577,95 @@ const Home = (props: HomeProps) => {
               </a>
             </div>
           </div>
-          <img
-            src='./Punk_Icon.png'
-            className='icon-size col-4 my-5 ms-3 ms-md-5'
-          />
+          <div className='icon-size col col-lg-4'>
+            <img
+              src='./Punk_Icon.png'
+              className='h-100 w-100 mt-5 my-lg-5 ms-3 ms-lg-5'
+            />
+          </div>
+        </div>
+        <div
+          className={`d-flex d-lg-none flex-row flex-wrap justify-content-center justify-content-lg-start align-items-left fnt mt-5`}>
+          <a
+            className={`style-btn d-flex flex-row align-items-center btn bg-color-main text-white text-uppercase my-4 p-4`}
+            href={'http://discord.gg/s99MhhmttM'}>
+            Discord
+          </a>
+          <a
+            className={`style-btn d-flex flex-row align-items-center btn bg-color-main text-white text-uppercase my-4 m-2 p-4`}
+            href={'https://www.magiceden.io/marketplace/punks_evolved'}>
+            Magic Eden
+          </a>
+          <a
+            className={`style-btn d-flex flex-row align-items-center btn bg-color-main text-white text-uppercase my-4 m-2 p-4`}
+            href={'https://twitter.com/punksevolved'}>
+            Twitter
+          </a>
         </div>
       </div>
-      {/* SECTION FIVE JACKS*/}
-      <div
-        className={`container-fluid jitb-bg d-flex flex-column flex-md-row justify-content-between align-items-center section-wrap punks-py`}>
-        <img
-          src='./Jacks_Icon.png'
-          className='icon-size col-4 my-5 me-3 me-md-5'
-        />
-        <div className={`d-flex flex-column col col-md-8`}>
-          <h1 className={`punk-font my-5 fnt-color-main fnt`}>
-            Jack in The Blocks?
-          </h1>
-          <p>
-            <span className='ft'>
-              The second project in our ecosystem and the first airdrop to Punks
-              Evolved holders. Owning a Jack is owning a AAA 3 D project with
-              the lowest mint price on Solana, as well as utility incentives via
-              a 10% royalty allocation to MetaWares Marketplace.
-            </span>
-          </p>
 
-          <div
-            className={`d-flex flex-row flex-wrap justify-content-center align-items-center`}>
-            <a
-              className={`style-btn d-flex flex-row align-items-center btn bg-color-main text-white text-uppercase my-4 p-4 fnt`}
-              href={'http://discord.gg/s99MhhmttM'}>
-              Discord
-            </a>
-            <a
-              className={`style-btn d-flex flex-row align-items-center btn bg-color-main text-white text-uppercase my-4 m-2 p-4 fnt`}
-              href={'https://jacksevolved.io/'}>
-              Mint
-            </a>
-            <a
-              className={`style-btn d-flex flex-row align-items-center btn bg-color-main text-white text-uppercase my-4 m-2 p-4 fnt`}
-              href={'https://twitter.com/punksevolved'}>
-              Twitter
-            </a>
+      {/* SECTION FIVE JACKS*/}
+      <div className='d-flex flex-column container-fluid section-wrap'>
+        <div
+          className={`d-flex flex-column flex-lg-row justify-content-between align-items-center about-my`}>
+          
+          <div className='icon-size col col-lg-4 m-lg-0'>
+            <img
+              src='./Jacks_Icon.png'
+              className='h-100 w-100 my-lg-5 me-3 me-lg-5'
+            />
           </div>
+          <div className={`d-flex flex-column col col-lg-6`}>
+            <h1 className={`punk-font my-5 fnt-color-main fnt`}>
+              Jack in The Blocks?
+            </h1>
+            <p>
+              <span className='ft'>
+                The second project in our ecosystem and the first airdrop to
+                Punks Evolved holders. Owning a Jack is owning a AAA 3 D project
+                with the lowest mint price on Solana, as well as utility
+                incentives via a 10% royalty allocation to MetaWares
+                Marketplace.
+              </span>
+            </p>
+
+            <div
+              className={`d-none d-lg-flex flex-row flex-wrap justify-content-left align-items-center`}>
+              <a
+                className={`style-btn d-flex flex-row align-items-center btn bg-color-main text-white text-uppercase my-4 p-4 fnt`}
+                href={'http://discord.gg/s99MhhmttM'}>
+                Discord
+              </a>
+              <a
+                className={`style-btn d-flex flex-row align-items-center btn bg-color-main text-white text-uppercase my-4 m-2 p-4 fnt`}
+                href={'https://jacksevolved.io/'}>
+                Mint
+              </a>
+              <a
+                className={`style-btn d-flex flex-row align-items-center btn bg-color-main text-white text-uppercase my-4 m-2 p-4 fnt`}
+                href={'https://twitter.com/punksevolved'}>
+                Twitter
+              </a>
+            </div>
+          </div>
+        </div>
+        <div
+          className={`d-flex d-lg-none flex-row flex-wrap justify-content-center justify-content-lg-start  align-items-left fnt mt-5`}>
+          <a
+            className={`style-btn d-flex flex-row align-items-center btn bg-color-main text-white text-uppercase my-4 p-4 fnt`}
+            href={'http://discord.gg/s99MhhmttM'}>
+            Discord
+          </a>
+          <a
+            className={`style-btn d-flex flex-row align-items-center btn bg-color-main text-white text-uppercase my-4 m-2 p-4 fnt`}
+            href={'https://jacksevolved.io/'}>
+            Mint
+          </a>
+          <a
+            className={`style-btn d-flex flex-row align-items-center btn bg-color-main text-white text-uppercase my-4 m-2 p-4 fnt`}
+            href={'https://twitter.com/punksevolved'}>
+            Twitter
+          </a>
         </div>
       </div>
 
@@ -659,7 +712,7 @@ const Home = (props: HomeProps) => {
           {alertState.message}
         </Alert>
       </Snackbar>
-    </>
+    </main>
   );
 };
 
