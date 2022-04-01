@@ -219,6 +219,10 @@ const Home = (props: HomeProps) => {
           .Punks-Evolved-container {
             min-height: 37.5rem;
           }
+          .text-section{
+            max-width: 500px;
+            width: 100%;
+          }
 
           .stay-involved {
             height: 100%;
@@ -483,7 +487,7 @@ const Home = (props: HomeProps) => {
         <div className='s-bar mb-5 mx-auto'></div>
         <div
           className={` d-flex flex-column flex-lg-row justify-content-around align-items-center  py-5 mt-5`}>
-          <div className={`d-flex flex-column mb-5 col col-lg-6`}>
+          <div className={`d-flex flex-column mb-5 col col-lg-6 text-section`}>
             <p className=''>
               Our Third and final project in our ecosystem, airdropped to Punks
               Evolved Holders after our snapshot post whitelist sale.
@@ -514,6 +518,11 @@ const Home = (props: HomeProps) => {
                 href={'https://punksevolved.io/'}>
                 Read Article
               </a>
+              <a
+                className={`style-btn d-flex flex-row align-items-center btn bg-color-main text-white text-uppercase my-4 m-2 p-4`}
+                href={'https://twitter.com/metawaresmarket'}>
+               Twitter
+              </a>
             </div>
           </div>
           <video
@@ -538,12 +547,12 @@ const Home = (props: HomeProps) => {
       <div className='d-flex flex-column grey-bg section-wrap about-my'>
         <div
           className={`container d-flex flex-column flex-lg-row justify-content-between align-items-center  punks-py`}>
-          <div className={`d-flex flex-column col col-lg-6`}>
+          <div className={`d-flex flex-column col col-lg-6 `}>
             <h1 className={`punk-font fnt-color-main mb-5 fnt`}>
               Punks Evolved
             </h1>
 
-            <p className=''>
+            <p className='text-section'>
               <span className=''>
                 The genesis project to our ecosystem and the airdrop access card
                 to all of our projects, the first of which was Jack In The
@@ -618,7 +627,7 @@ const Home = (props: HomeProps) => {
             <h1 className={`punk-font my-5 fnt-color-main fnt`}>
               Jack in The Blocks?
             </h1>
-            <p>
+            <p className='text-section'>
               <span className='ft'>
                 The second project in our ecosystem and the first airdrop to
                 Punks Evolved holders. Owning a Jack is owning a AAA 3 D project
