@@ -443,7 +443,7 @@ const Home = (props: HomeProps) => {
         <div className='bar'></div>
         <br />
         <div className='s-bar mb-5'></div>
-        <div className='d-flex flex-column flex-md-row align-items-center justify-content-between justify-content-md-center mx-3 pt-3 pb-5 mt-5'>
+        <div className='container d-flex flex-column flex-md-row align-items-center justify-content-between justify-content-md-center pt-3 pb-5 mt-5'>
           <img
             className='col-12 col-sm-8 col-md-4 my-3'
             src='https://cdn.discordapp.com/attachments/905542266549047336/950190179912667166/Implement_Blurb-01.png'
@@ -467,7 +467,7 @@ const Home = (props: HomeProps) => {
         <br />
         <div className='s-bar mb-5 mx-auto'></div>
         <div
-          className={` d-flex flex-column flex-lg-row justify-content-around align-items-center  py-5 mt-5`}>
+          className={`container d-flex flex-column flex-lg-row justify-content-between align-items-center  py-5 mt-5`}>
           <div className={`d-flex flex-column mb-5 col col-lg-6 text-section`}>
             <p className=''>
               "Our Third and final project in our ecosystem, airdropped to Punks
@@ -581,9 +581,9 @@ const Home = (props: HomeProps) => {
       </div>
 
       {/* SECTION FIVE JACKS*/}
-      <div className='d-flex flex-column container-fluid section-wrap'>
+      <div className='d-flex flex-column  section-wrap'>
         <div
-          className={`d-flex flex-column flex-lg-row justify-content-between align-items-center about-my`}>
+          className={`container d-flex flex-column flex-lg-row justify-content-between align-items-center about-my`}>
           <div className='icon-size col col-lg-4 m-lg-0'>
             <img
               src='./Jacks_Icon.png'
