@@ -219,7 +219,7 @@ const Home = (props: HomeProps) => {
           .Punks-Evolved-container {
             min-height: 37.5rem;
           }
-          .text-section{
+          .text-section {
             max-width: 500px;
             width: 100%;
           }
@@ -458,25 +458,6 @@ const Home = (props: HomeProps) => {
           />
         </div>
       </div>
-      {/* SECTION THREE ROADMAP */}
-      <div
-        className={`roadmap mx-auto d-flex flex-row justify-content-center
-            align-items-center my-5`}>
-        <img
-          className={`text-center w-100 h-100 d-flex d-lg-none`}
-          src={
-            'https://cdn.discordapp.com/attachments/905542266549047336/946346356396675102/Roadmap_squared_optimized_for_mobile.png'
-          }
-          alt='roadmap'
-        />
-        <img
-          className={`text-center w-100 h-100 d-none d-lg-flex`}
-          src={
-            'https://cdn.discordapp.com/attachments/905542266549047336/946346425292316682/Roadmap_Banner_optimized_and_clipped_for_web.png'
-          }
-          alt='roadmap'
-        />
-      </div>
       {/* SECTION SIX MORE */}
       <div className=' d-flex flex-column pt-5 pb-3 section-wrap'>
         <h1 className={` mb-5 punk-font fnt-color-main text-center fnt`}>
@@ -489,26 +470,17 @@ const Home = (props: HomeProps) => {
           className={` d-flex flex-column flex-lg-row justify-content-around align-items-center  py-5 mt-5`}>
           <div className={`d-flex flex-column mb-5 col col-lg-6 text-section`}>
             <p className=''>
-              Our Third and final project in our ecosystem, airdropped to Punks
+              "Our Third and final project in our ecosystem, airdropped to Punks
               Evolved Holders after our snapshot post whitelist sale.
             </p>
             <p>
-              <span className=''>Owning a card grants</span>{' '}
-              <span className=''>65%</span>{' '}
-              <span className=''>
-                royalty allocation to all aftermarket fees generated on
-                MetaWares marketplace, airdropped automatically each week.
-              </span>
+              Owning a card grants 70% royalty weight to the allocation from the
+              treasury to all aftermarket fees generated on MetaWares
+              marketplace, airdropped automatically each week.
             </p>
             <p>
-              <span className=''>
-                It will also secure you to all future benefits the marketplace
-                holds such as{' '}
-              </span>{' '}
-              <span className=''>3</span>
-              <span className=''>
-                D video tutorials, special access mints, and more.
-              </span>
+              It will also secure you to all future benefits the marketplace
+              holds such as 3D video tutorials, special access mints, and more."
             </p>
 
             <div
@@ -521,7 +493,7 @@ const Home = (props: HomeProps) => {
               <a
                 className={`style-btn d-flex flex-row align-items-center btn bg-color-main text-white text-uppercase my-4 m-2 p-4`}
                 href={'https://twitter.com/metawaresmarket'}>
-               Twitter
+                Twitter
               </a>
             </div>
           </div>
@@ -553,18 +525,13 @@ const Home = (props: HomeProps) => {
             </h1>
 
             <p className='text-section'>
-              <span className=''>
-                The genesis project to our ecosystem and the airdrop access card
-                to all of our projects, the first of which was Jack In The
-                Blocks. Punks Evolved Holders will also receive a MetaWares
-                market Card as an airdrop after the snapshot taken some time
-                after our sale. Punks Evolved also serves as one of our three
-                utility NFTs which grants a{' '}
-              </span>
-              <span className=''>30%</span>{' '}
-              <span className=''>
-                allocation to MetaWares Market royalties.
-              </span>
+              "The genesis project to our ecosystem and the airdrop access card
+              to all of our projects, the first of which being Jack In The
+              Blocks. Punks Evolved Holders will also receive a MetaWares market
+              Card as an airdrop after the snapshot 2 weeks after our sale.
+              Punks Evolved also serves as one of our three utility NFTs which
+              grants a 20% royalty weight to MetaWares Market treasury
+              allocation."
             </p>
 
             <div
@@ -628,13 +595,13 @@ const Home = (props: HomeProps) => {
               Jack in The Blocks?
             </h1>
             <p className='text-section'>
-              <span className='ft'>
-                The second project in our ecosystem and the first airdrop to
-                Punks Evolved holders. Owning a Jack is owning a AAA 3 D project
-                with the lowest mint price on Solana, as well as utility
-                incentives via a 10% royalty allocation to MetaWares
-                Marketplace.
-              </span>
+              "The genesis project to our ecosystem and the airdrop access card
+              to all of our projects, the first of which being Jack In The
+              Blocks. Punks Evolved Holders will also receive a MetaWares market
+              Card as an airdrop after the snapshot 2 weeks after our sale.
+              Punks Evolved also serves as one of our three utility NFTs which
+              grants a 20% royalty weight to MetaWares Market treasury
+              allocation."
             </p>
 
             <div
