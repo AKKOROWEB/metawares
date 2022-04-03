@@ -331,12 +331,12 @@ const Home = (props: HomeProps) => {
             height: 0.1875rem;
             max-width: 33%;
             width: 100%;
-            background-color: grey;
+            background-color: light-grey;
           }
 
           .section-wrap {
-            padding-top: 4.125rem;
-            padding-bottom: 4.125rem;
+            padding-top: 5.125rem;
+            padding-bottom: 5.125rem;
             padding-left: 10%;
             padding-right: 10%;
           }
