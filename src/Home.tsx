@@ -170,6 +170,11 @@ const Home = (props: HomeProps) => {
       <style jsx>
         {`
           @import url('http://fonts.cdnfonts.com/css/media-gothic');
+          body {
+            margin: 0;
+            background-color: RGB(255, 255, 255) !important;
+            margin: 0 auto;
+          }
           iframe {
             display: none;
           }
@@ -184,11 +189,7 @@ const Home = (props: HomeProps) => {
           .header-h {
             height: 500px;
           }
-          body {
-            margin: 0;
-            background-color: RGB(255, 255, 255) !important;
-            margin: 0 auto;
-          }
+
           .fnt {
             font-family: 'Media Gothic', -apple-system, BlinkMacSystemFont,
               'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
@@ -205,10 +206,11 @@ const Home = (props: HomeProps) => {
             font-size: 1.25rem;
           }
 
-          .about-my {
-            // padding-top: 5% !important;
-            padding-bottom: 5% !important;
-          }
+          // .about-my {
+          //   // padding-top: 5% !important;
+          //   padding-bottom: 5% !important;
+          // }
+
           .punks-py {
             padding-top: 8% !important;
             padding-bottom: 8% !important;
@@ -220,7 +222,7 @@ const Home = (props: HomeProps) => {
             min-height: 37.5rem;
           }
           .text-section {
-            max-width: 500px;
+            max-width: 600px;
             width: 100%;
           }
 
@@ -331,13 +333,10 @@ const Home = (props: HomeProps) => {
             width: 100%;
             background-color: grey;
           }
-          . {
-            font-family: 'Courier New', Courier, monospace;
-            font-weight: bold;
-          }
+
           .section-wrap {
-            margin-top: 5%;
-            margin-bottom: 5%;
+            padding-top: 4.125rem;
+            padding-bottom: 4.125rem;
             padding-left: 10%;
             padding-right: 10%;
           }
@@ -386,7 +385,7 @@ const Home = (props: HomeProps) => {
         `}
       </style>
 
-      <div className='bg-header header-h d-flex flex-column flex-md-row align-items-center justify-content-start justify-content-md-around mb-5'>
+      <div className='bg-header header-h d-flex flex-column flex-md-row align-items-center justify-content-start justify-content-md-around'>
         <div className='col-10 col-md-4 px-3 order-1 order-md-0'>
           <div className='mw-360 w-100'>
             {!wallet.connected ? (
@@ -436,14 +435,14 @@ const Home = (props: HomeProps) => {
         {/* </Paper> */}
       </div>
       {/* SECTION TWO ABOUT */}
-      <div className=' about-my d-flex flex-column justify-content-center align-items-center section-wrap'>
+      <div className='d-flex flex-column justify-content-center align-items-center grey-bg section-wrap mt-0'>
         <h3 className='py-4 mb-4 punk-font fnt fnt-color-main text-center '>
           Understanding Metawares
         </h3>
         <div className='bar'></div>
         <br />
         <div className='s-bar mb-5'></div>
-        <div className='container d-flex flex-column flex-md-row align-items-center justify-content-between justify-content-md-center pt-3 pb-5 mt-5'>
+        <div className='container d-flex flex-column flex-md-row align-items-center justify-content-between justify-content-md-center pt-3 mt-5'>
           <img
             className='col-12 col-sm-8 col-md-4 my-3'
             src='https://cdn.discordapp.com/attachments/905542266549047336/950190179912667166/Implement_Blurb-01.png'
@@ -459,15 +458,15 @@ const Home = (props: HomeProps) => {
         </div>
       </div>
       {/* SECTION SIX MORE */}
-      <div className=' d-flex flex-column pt-5 pb-3 section-wrap'>
+      <div className=' d-flex flex-column justify-content-center align-items-center section-wrap'>
         <h1 className={` mb-5 punk-font fnt-color-main text-center fnt`}>
           A DEEPER COMPREHENSIVE
         </h1>
         <div className='bar mx-auto'></div>
         <br />
-        <div className='s-bar mb-5 mx-auto'></div>
+        <div className='s-bar mb-3 mx-auto'></div>
         <div
-          className={`container d-flex flex-column flex-lg-row justify-content-between align-items-center  py-5 mt-5`}>
+          className={`container d-flex flex-column flex-xl-row justify-content-between align-items-center  py-5 mt-5`}>
           <div className={`d-flex flex-column mb-5 col col-lg-6 text-section`}>
             <p className=''>
               "Our Third and final project in our ecosystem, airdropped to Punks
@@ -484,7 +483,7 @@ const Home = (props: HomeProps) => {
             </p>
 
             <div
-              className={`d-none d-lg-flex flex-row flex-wrap justify-content-left align-items-center fnt `}>
+              className={`d-none d-xl-flex flex-row flex-wrap justify-content-left align-items-center fnt `}>
               <a
                 className={`style-btn d-flex flex-row align-items-center btn bg-color-main text-white text-uppercase my-4 m-2 p-4`}
                 href={'https://punksevolved.io/'}>
@@ -501,24 +500,29 @@ const Home = (props: HomeProps) => {
             autoPlay
             loop
             muted
-            className='js-video icon-size col-4  mt-5 my-lg-0  ms-0 ms-md-5'>
+            className='js-video icon-size col-4  mt-5 my-lg-0  ms-0 ms-lg-5'>
             {' '}
             <source src='./metawares.mp4' type='video/mp4' />
           </video>
         </div>
         <div
-          className={`d-flex d-lg-none  flex-row flex-wrap justify-content-center align-items-center fnt`}>
+          className={`d-flex d-xl-none flex-row flex-wrap justify-content-center align-items-center fnt`}>
           <a
             className={`style-btn d-flex flex-row align-items-center btn bg-color-main text-white text-uppercase my-4 m-2 p-4`}
             href={'https://punksevolved.io/'}>
             Read Article
           </a>
+             <a
+                className={`style-btn d-flex flex-row align-items-center btn bg-color-main text-white text-uppercase my-4 m-2 p-4`}
+                href={'https://twitter.com/metawaresmarket'}>
+                Twitter
+              </a>
         </div>
       </div>
       {/* SECTION FOUR PUNKS */}
-      <div className='d-flex flex-column grey-bg section-wrap about-my'>
+      <div className='d-flex flex-column justify-content-center align-items-center grey-bg section-wrap'>
         <div
-          className={`container d-flex flex-column flex-lg-row justify-content-between align-items-center  punks-py`}>
+          className={`container d-flex flex-column flex-lg-row justify-content-between align-items-center`}>
           <div className={`d-flex flex-column col col-lg-6 `}>
             <h1 className={`punk-font fnt-color-main mb-5 fnt`}>
               Punks Evolved
@@ -556,7 +560,7 @@ const Home = (props: HomeProps) => {
           <div className='icon-size col col-lg-4'>
             <img
               src='./Punk_Icon.png'
-              className='h-100 w-100 mt-5 my-lg-5 ms-3 ms-lg-5'
+              className='h-100 w-100 mt-5 my-lg-0 ms-3 ms-lg-5'
             />
           </div>
         </div>
@@ -581,13 +585,13 @@ const Home = (props: HomeProps) => {
       </div>
 
       {/* SECTION FIVE JACKS*/}
-      <div className='d-flex flex-column  section-wrap'>
+      <div className='d-flex flex-column justify-content-center align-items-center section-wrap'>
         <div
-          className={`container d-flex flex-column flex-lg-row justify-content-between align-items-center about-my`}>
+          className={`container d-flex flex-column flex-lg-row justify-content-between align-items-center`}>
           <div className='icon-size col col-lg-4 m-lg-0'>
             <img
               src='./Jacks_Icon.png'
-              className='h-100 w-100 my-lg-5 me-3 me-lg-5'
+              className='h-100 w-100 my-lg-0 me-3 me-lg-5'
             />
           </div>
           <div className={`d-flex flex-column col col-lg-6`}>
