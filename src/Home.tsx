@@ -184,7 +184,7 @@ const Home = (props: HomeProps) => {
             background-size: cover;
           }
           .grey-bg {
-            background-color: #ededed;
+            background-color: #F2F2F2;
           }
           .header-h {
             height: 500px;
@@ -205,11 +205,6 @@ const Home = (props: HomeProps) => {
           p {
             font-size: 1.25rem;
           }
-
-          // .about-my {
-          //   // padding-top: 5% !important;
-          //   padding-bottom: 5% !important;
-          // }
 
           .punks-py {
             padding-top: 8% !important;
@@ -331,7 +326,7 @@ const Home = (props: HomeProps) => {
             height: 0.1875rem;
             max-width: 33%;
             width: 100%;
-            background-color: light-grey;
+            background-color: grey;
           }
 
           .section-wrap {
