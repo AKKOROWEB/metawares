@@ -170,6 +170,15 @@ const Home = (props: HomeProps) => {
       <style jsx>
         {`
           @import url('http://fonts.cdnfonts.com/css/media-gothic');
+          @font-face {
+            font-family: 'Media Gothic';
+            font-style: normal;
+            font-weight: 400;
+            src: local('Media Gothic'),
+              url('https://fonts.cdnfonts.com/s/8641/Md_Gothic11.woff')
+                format('woff');
+          }
+
           body {
             margin: 0;
             background-color: RGB(255, 255, 255) !important;
@@ -184,7 +193,7 @@ const Home = (props: HomeProps) => {
             background-size: cover;
           }
           .grey-bg {
-            background-color: #F2F2F2;
+            background-color: #f2f2f2;
           }
           .header-h {
             height: 500px;
@@ -507,11 +516,11 @@ const Home = (props: HomeProps) => {
             href={'https://punksevolved.io/'}>
             Read Article
           </a>
-             <a
-                className={`style-btn d-flex flex-row align-items-center btn bg-color-main text-white text-uppercase my-4 m-2 p-4`}
-                href={'https://twitter.com/metawaresmarket'}>
-                Twitter
-              </a>
+          <a
+            className={`style-btn d-flex flex-row align-items-center btn bg-color-main text-white text-uppercase my-4 m-2 p-4`}
+            href={'https://twitter.com/metawaresmarket'}>
+            Twitter
+          </a>
         </div>
       </div>
       {/* SECTION FOUR PUNKS */}
