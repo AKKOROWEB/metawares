@@ -645,7 +645,7 @@ const Home = (props: HomeProps) => {
 
       {/* SOCIAL ICONS */}
       <div
-        className={`container-fluid socials d-flex flex-row jsutify-content-center mx-auto `}>
+        className={`socials d-flex flex-row jsutify-content-center section-wrap`}>
         <div
           className={`d-flex flex-column 
             align-items-center justify-content-center w-100`}>
