@@ -556,7 +556,7 @@ const Home = (props: HomeProps) => {
               </a>
               <a
                 className={`style-btn d-flex flex-row align-items-center btn bg-color-main text-white text-uppercase my-4 m-2 p-4`}
-                href={'https://twitter.com/evolved_punks'}>
+                href={'https://twitter.com/EvolvedPunks'}>
                 Twitter
               </a>
             </div>
@@ -626,7 +626,7 @@ const Home = (props: HomeProps) => {
               </a>
               <a
                 className={`style-btn d-flex flex-row align-items-center btn bg-color-main text-white text-uppercase my-4 m-2 p-4 fnt`}
-                href={'https://twitter.com/punksevolved'}>
+                href={'https://twitter.com/JacksInTheBlock'}>
                 Twitter
               </a>
             </div>
@@ -646,7 +646,7 @@ const Home = (props: HomeProps) => {
           </a>
           <a
             className={`style-btn d-flex flex-row align-items-center btn bg-color-main text-white text-uppercase my-4 m-2 p-4 fnt`}
-            href={'https://twitter.com/punksevolved'}>
+            href={'https://twitter.com/JacksInTheBlock'}>
             Twitter
           </a>
         </div>
