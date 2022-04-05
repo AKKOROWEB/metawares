@@ -449,15 +449,15 @@ const Home = (props: HomeProps) => {
         <div className='container d-flex flex-column flex-md-row align-items-center justify-content-between justify-content-md-center pt-3 mt-5'>
           <img
             className='col-12 col-sm-8 col-md-4 my-3'
-            src='https://cdn.discordapp.com/attachments/905542266549047336/950190179912667166/Implement_Blurb-01.png'
-          />
-          <img
-            className='col-12 col-sm-8 col-md-4 my-3'
             src='https://cdn.discordapp.com/attachments/905542266549047336/950190180197892116/Mint_Blurb-01-01.png'
           />
           <img
             className='col-12 col-sm-8 col-md-4 my-3'
             src='https://cdn.discordapp.com/attachments/905542266549047336/950190180453724180/Trade_Blurb-01.png'
+          />
+          <img
+            className='col-12 col-sm-8 col-md-4 my-3'
+            src='https://cdn.discordapp.com/attachments/905542266549047336/950190179912667166/Implement_Blurb-01.png'
           />
         </div>
       </div>
@@ -490,7 +490,9 @@ const Home = (props: HomeProps) => {
               className={`d-none d-xl-flex flex-row flex-wrap justify-content-left align-items-center fnt `}>
               <a
                 className={`style-btn d-flex flex-row align-items-center btn bg-color-main text-white text-uppercase my-4 m-2 p-4`}
-                href={'https://medium.com/@punksevolved/metawares-major-update-76cc0de47c06'}>
+                href={
+                  'https://medium.com/@punksevolved/metawares-major-update-76cc0de47c06'
+                }>
                 Read Article
               </a>
               <a
