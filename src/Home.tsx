@@ -196,7 +196,7 @@ const Home = (props: HomeProps) => {
             background-color: #f2f2f2;
           }
           .header-h {
-            height: 500px;
+            min-height: 500px;
           }
 
           .fnt {
@@ -389,13 +389,13 @@ const Home = (props: HomeProps) => {
         `}
       </style>
 
-      <div className='bg-header header-h d-flex flex-column flex-md-row align-items-center justify-content-start justify-content-md-around'>
+      <div className='bg-header header-h d-flex flex-column flex-md-row align-items-center justify-content-start justify-content-md-center py-5'>
         <div className='col-10 col-md-4 px-3 order-1 order-md-0'>
-          <div className='mw-360 w-100'>
+          <div className='mw-360 w-100 mx-auto'>
             {!wallet.connected ? (
               <ConnectButton>Connect Wallet</ConnectButton>
             ) : (
-              <>
+              <div className='mx-auto'>
                 <Header candyMachine={candyMachine} />
                 <MintContainer>
                   {candyMachine?.state.isActive &&
@@ -429,7 +429,7 @@ const Home = (props: HomeProps) => {
                     />
                   )}
                 </MintContainer>
-              </>
+              </div>
             )}
           </div>
         </div>

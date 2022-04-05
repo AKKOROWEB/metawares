@@ -1,3 +1,4 @@
+//@ts-nocheck
 import * as anchor from '@project-serum/anchor';
 
 import Grid from '@material-ui/core/Grid';
@@ -17,12 +18,12 @@ export const Header = ({ candyMachine }: HeaderProps) => {
         {candyMachine && (
           <Grid container direction="row" wrap="nowrap">
             <Grid container direction="column">
-              <Typography variant="body2" color="textSecondary">
+              <Typography variant="body2" color="black">
                 Remaining
               </Typography>
               <Typography
                 variant="h6"
-                color="textPrimary"
+                color="black"
                 style={{
                   fontWeight: 'bold',
                 }}
@@ -31,12 +32,12 @@ export const Header = ({ candyMachine }: HeaderProps) => {
               </Typography>
             </Grid>
             <Grid container direction="column">
-              <Typography variant="body2" color="textSecondary">
-                Price
+              <Typography variant="body2" color="black">
+                {' '}Price
               </Typography>
               <Typography
                 variant="h6"
-                color="textPrimary"
+                color="black"
                 style={{ fontWeight: 'bold' }}
               >
                 ◎ {formatNumber.asNumber(candyMachine?.state.price!)}
