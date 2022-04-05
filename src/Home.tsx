@@ -605,13 +605,7 @@ const Home = (props: HomeProps) => {
               Jack in The Blocks?
             </h1>
             <p className='text-section'>
-              "The genesis project to our ecosystem and the airdrop access card
-              to all of our projects, the first of which being Jack In The
-              Blocks. Punks Evolved Holders will also receive a MetaWares market
-              Card as an airdrop after the snapshot 2 weeks after our sale.
-              Punks Evolved also serves as one of our three utility NFTs which
-              grants a 20% royalty weight to MetaWares Market treasury
-              allocation."
+              "The second project in our ecosystem and the first airdrop to Punks Evolved holders. Owning a Jack is owning a AAA 3 D project with one of the lowest mint price on Solana, as well as utility incentives via a 10% royalty weight to MetaWares Marketplace treasury allocation"
             </p>
 
             <div
