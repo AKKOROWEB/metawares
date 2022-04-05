@@ -490,7 +490,7 @@ const Home = (props: HomeProps) => {
               className={`d-none d-xl-flex flex-row flex-wrap justify-content-left align-items-center fnt `}>
               <a
                 className={`style-btn d-flex flex-row align-items-center btn bg-color-main text-white text-uppercase my-4 m-2 p-4`}
-                href={'https://punksevolved.io/'}>
+                href={'https://medium.com/@punksevolved/metawares-major-update-76cc0de47c06'}>
                 Read Article
               </a>
               <a
