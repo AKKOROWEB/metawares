@@ -187,6 +187,9 @@ const Home = (props: HomeProps) => {
           iframe {
             display: none;
           }
+          iframe#CIVIC_PASS_IFRAME {
+            display: block;
+          }
           .bg-header {
             background: url('./Just_concrete_optimized.png') no-repeat top
               center;
